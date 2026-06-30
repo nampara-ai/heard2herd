@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event | Heard2Herd</title>
+  <meta name="description" content="A Heard2Herd event archive with story and gallery.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/seehorse.css">
+  <noscript><style>.page-loader{display:none}.reveal-init{opacity:1;transform:none}</style></noscript>
+</head>
+<body x-data="site()" :class="{ 'no-scroll': mobileNavOpen || searchOpen || lightboxOpen }">
+<div class="page-loader" :class="{ hidden: loaded }" aria-hidden="true"><div class="page-loader-text">H E A R D 2 H E R D</div></div>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<template x-if="mobileNavOpen"><div class="mobile-nav-backdrop" @click="closeMobileNav()"></div></template>
+<nav class="mobile-nav" :class="{ open: mobileNavOpen }" aria-label="Mobile navigation" x-cloak>
+  <div class="mobile-nav-header"><span>H E A R D 2 H E R D</span><button class="mobile-nav-close" @click="closeMobileNav()" aria-label="Close navigation"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button></div>
+  <div class="mobile-nav-items"><div class="mobile-nav-item"><a href="seehorse.html" class="mobile-nav-item-header" style="text-decoration:none;"><span>Home</span></a></div><div id="mobile-nav-list"></div></div>
+</nav>
+
+<header class="header header--overlay" :class="{ 'header--scrolled': scrolled }" role="banner">
+  <div class="header-top">
+    <div class="header-left"><button class="hamburger" :class="{ active: mobileNavOpen }" @click="toggleMobileNav()" aria-label="Open menu"><span></span><span></span><span></span></button></div>
+    <a href="seehorse.html" class="header-logo">H &nbsp;E &nbsp;A &nbsp;R &nbsp;D &nbsp;2 &nbsp;H &nbsp;E &nbsp;R &nbsp;D</a>
+    <div style="display:flex;align-items:center;gap:16px;"><a href="https://www.lundahlperformance.com" class="header-actions" target="_blank" rel="noopener noreferrer">Noble Farm</a></div>
+  </div>
+  <nav class="header-nav" aria-label="Main navigation"><ul id="header-nav-list"></ul></nav>
+</header>
+
+<main id="main-content" class="event-detail-page">
+  <div class="page-container">
+    <div class="profile-notfound" id="event-notfound" hidden>
+      <h1>Event not found</h1>
+      <a href="events.html" class="btn-ghost btn-ghost--dark">&larr; Back to Events</a>
+    </div>
+
+    <article id="event-detail">
+      <section class="event-detail-hero reveal-init" x-intersect:enter.once="$el.classList.add('revealed')">
+        <div class="event-detail-copy">
+          <p class="profile-eyebrow" id="event-status"></p>
+          <h1 id="event-title"></h1>
+          <p class="event-card-date" id="event-meta"></p>
+          <p class="event-summary" id="event-summary"></p>
+          <div id="event-details" class="event-details"></div>
+          <a id="event-cta" class="btn-ghost btn-ghost--dark" target="_blank" rel="noopener noreferrer" hidden></a>
+        </div>
+        <div class="event-detail-media" id="event-hero-media"></div>
+      </section>
+
+      <section class="event-story reveal-init" x-intersect:enter.once="$el.classList.add('revealed')">
+        <p class="profile-eyebrow">Field Notes</p>
+        <div id="event-body"></div>
+      </section>
+
+      <section class="event-gallery-section reveal-init" x-intersect:enter.once="$el.classList.add('revealed')">
+        <div class="event-gallery-heading">
+          <p class="profile-eyebrow">Gallery</p>
+          <h2>Archive</h2>
+        </div>
+        <div class="event-gallery-grid" id="event-gallery-grid"></div>
+      </section>
+
+      <div style="text-align:center;margin-top:64px;">
+        <a href="events.html" class="btn-ghost btn-ghost--dark">&larr; Back to Events</a>
+      </div>
+    </article>
+  </div>
+</main>
+
+<div class="lightbox" x-show="lightboxOpen" x-cloak
+     x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+     x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+     @keydown.escape.window="lightboxOpen && closeLightbox()"
+     @keydown.arrow-right.window="lightboxOpen && lightboxNext()"
+     @keydown.arrow-left.window="lightboxOpen && lightboxPrev()"
+     @click.self="closeLightbox()" role="dialog" aria-modal="true" aria-label="Event gallery viewer">
+  <img :src="lightboxGallery[lightboxIndex] || ''" alt="">
+  <button class="lightbox-btn lightbox-close" @click="closeLightbox()" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button>
+  <button class="lightbox-btn lightbox-prev" @click.stop="lightboxPrev()" aria-label="Previous image" x-show="lightboxGallery.length > 1"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg></button>
+  <button class="lightbox-btn lightbox-next" @click.stop="lightboxNext()" aria-label="Next image" x-show="lightboxGallery.length > 1"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg></button>
+</div>
+
+<script src="herd-data.js"></script>
+<script src="people-data.js"></script>
+<script src="events-data.js"></script>
+<script src="assets/herd-render.js"></script>
+<script src="assets/site.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<script>(function(){window.addEventListener('load',function(){window.setTimeout(function(){if(!window.Alpine){document.documentElement.classList.add('alpine-failed');}},1000);});})();</script>
+</body>
+</html>

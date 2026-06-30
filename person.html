@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | Heard2Herd</title>
+  <meta name="description" content="A Heard2Herd facilitator, artist, or practitioner profile at Noble Farm.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/seehorse.css">
+  <noscript>
+    <style>
+      .page-loader { display: none; }
+      .reveal-init { opacity: 1; transform: none; }
+    </style>
+  </noscript>
+</head>
+<body x-data="site()" :class="{ 'no-scroll': mobileNavOpen || searchOpen || lightboxOpen }">
+
+<div class="page-loader" :class="{ hidden: loaded }" aria-hidden="true">
+  <div class="page-loader-text">H E A R D 2 H E R D</div>
+</div>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div class="search-overlay" x-show="searchOpen" x-cloak
+     x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+     x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+     @keydown.escape.window="searchOpen && closeSearch()" role="dialog" aria-label="Search">
+  <button class="search-overlay-close" @click="closeSearch()" aria-label="Close search">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+    </svg>
+  </button>
+  <div class="search-input-wrapper">
+    <input type="text" class="search-input" placeholder="Search Heard2Herd..." x-ref="searchInput" aria-label="Search">
+    <div class="search-tags">
+      <button class="search-tag">Kimberly</button>
+      <button class="search-tag">The Circle</button>
+      <button class="search-tag">Artists</button>
+      <button class="search-tag">Practice</button>
+      <button class="search-tag">Portfolio</button>
+    </div>
+  </div>
+</div>
+
+<template x-if="mobileNavOpen">
+  <div class="mobile-nav-backdrop" @click="closeMobileNav()"></div>
+</template>
+<nav class="mobile-nav" :class="{ open: mobileNavOpen }" aria-label="Mobile navigation" x-cloak>
+  <div class="mobile-nav-header">
+    <span>H E A R D 2 H E R D</span>
+    <button class="mobile-nav-close" @click="closeMobileNav()" aria-label="Close navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-nav-items">
+    <div class="mobile-nav-item">
+      <button class="mobile-nav-item-header" @click="closeMobileNav(); openSearch()" style="cursor: pointer;">
+        <span>Search</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" style="width:16px;height:16px;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-nav-item" style="border-bottom: 1px solid var(--color-border-light); margin-bottom: 8px; padding-bottom: 8px;">
+      <a href="seehorse.html" class="mobile-nav-item-header" style="text-decoration: none;">
+        <span>Home</span>
+      </a>
+    </div>
+    <div id="mobile-nav-list"></div>
+  </div>
+</nav>
+
+<header class="header header--overlay" :class="{ 'header--scrolled': scrolled }" role="banner">
+  <div class="header-top">
+    <div class="header-left">
+      <button class="hamburger" :class="{ active: mobileNavOpen }" @click="toggleMobileNav()" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <button class="header-search" @click="openSearch()" aria-label="Open search">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+        </svg>
+        <span>SEARCH</span>
+      </button>
+    </div>
+    <a href="seehorse.html" class="header-logo">H &nbsp;E &nbsp;A &nbsp;R &nbsp;D &nbsp;2 &nbsp;H &nbsp;E &nbsp;R &nbsp;D</a>
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <a href="https://www.lundahlperformance.com" class="header-actions" target="_blank" rel="noopener noreferrer">Noble Farm</a>
+      <button class="header-search-mobile" @click="openSearch()" aria-label="Open search">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <nav class="header-nav" aria-label="Main navigation">
+    <ul id="header-nav-list"></ul>
+  </nav>
+</header>
+
+<main id="main-content" class="profile-page person-page">
+  <div class="page-container">
+    <div class="profile-notfound" id="person-notfound" hidden>
+      <h1>Profile not found</h1>
+      <a href="people.html" class="btn-ghost btn-ghost--dark">&larr; Back to The Circle</a>
+    </div>
+
+    <div class="profile-grid person-profile-grid" id="person-profile-grid">
+      <div class="profile-gallery">
+        <div id="gallery-media">
+          <div class="swiper profile-swiper">
+            <div class="swiper-wrapper" id="gallery-slides"></div>
+            <button class="gallery-arrow profile-prev" aria-label="Previous image">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+            </button>
+            <button class="gallery-arrow profile-next" aria-label="Next image">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+            </button>
+          </div>
+          <div class="profile-dots"></div>
+        </div>
+      </div>
+
+      <div class="profile-info">
+        <p class="profile-eyebrow" id="person-eyebrow"></p>
+        <h1 class="profile-name" id="person-name"></h1>
+        <p class="profile-reg" id="person-role"></p>
+        <div class="profile-bio" id="person-bio"></div>
+        <div class="person-links" id="person-links"></div>
+      </div>
+    </div>
+
+    <section class="person-sections reveal-init" id="person-sections" x-intersect:enter.once="$el.classList.add('revealed')"></section>
+
+    <div style="text-align: center; margin-top: 64px;">
+      <a href="people.html" class="btn-ghost btn-ghost--dark">&larr; Back to The Circle</a>
+    </div>
+  </div>
+</main>
+
+<div class="lightbox" x-show="lightboxOpen" x-cloak
+     x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+     x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+     @keydown.escape.window="lightboxOpen && closeLightbox()"
+     @keydown.arrow-right.window="lightboxOpen && lightboxNext()"
+     @keydown.arrow-left.window="lightboxOpen && lightboxPrev()"
+     @click.self="closeLightbox()"
+     role="dialog" aria-modal="true" aria-label="Portfolio viewer">
+  <img :src="lightboxGallery[lightboxIndex] || ''" alt="">
+  <button class="lightbox-btn lightbox-close" @click="closeLightbox()" aria-label="Close">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+  </button>
+  <button class="lightbox-btn lightbox-prev" @click.stop="lightboxPrev()" aria-label="Previous image" x-show="lightboxGallery.length > 1">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+  </button>
+  <button class="lightbox-btn lightbox-next" @click.stop="lightboxNext()" aria-label="Next image" x-show="lightboxGallery.length > 1">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+  </button>
+</div>
+
+<footer class="footer" role="contentinfo">
+  <nav aria-label="Footer navigation">
+    <div class="footer-main">
+      <a href="seehorse.html" class="footer-logo">H &nbsp;E &nbsp;A &nbsp;R &nbsp;D &nbsp;2 &nbsp;H &nbsp;E &nbsp;R &nbsp;D</a>
+      <div class="footer-column" :class="{ open: footerAccordion === 0 }">
+        <button class="footer-toggle mobile-nav-item-header" @click="footerAccordion = footerAccordion === 0 ? null : 0" style="padding-left:0;padding-right:0;">
+          <span>The Herd</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+        </button>
+        <h4 class="footer-desktop-heading" style="display:block;"><a href="herd.html">The Herd</a></h4>
+        <ul id="footer-herd-list"></ul>
+      </div>
+      <div class="footer-column" :class="{ open: footerAccordion === 1 }">
+        <button class="footer-toggle mobile-nav-item-header" @click="footerAccordion = footerAccordion === 1 ? null : 1" style="padding-left:0;padding-right:0;">
+          <span>The Circle</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+        </button>
+        <h4 class="footer-desktop-heading" style="display:block;"><a href="people.html">The Circle</a></h4>
+        <ul id="footer-people-list"></ul>
+      </div>
+      <div class="footer-column">
+        <h4><a href="events.html">Events</a></h4>
+        <address class="footer-address">
+          Noble Farm<br>
+          10489 Pekin Rd<br>
+          Newbury, OH 44065
+        </address>
+      </div>
+    </div>
+  </nav>
+  <div class="footer-bottom">
+    <div class="footer-bottom-left">
+      <span>&copy; 2026 Heard2Herd. All Rights Reserved.</span>
+    </div>
+    <div class="footer-bottom-right">
+      <a href="https://www.instagram.com/heard2herd/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" :style="{ opacity: scrolled ? 1 : 0, pointerEvents: scrolled ? 'auto' : 'none' }" @click="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Back to top">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"/>
+  </svg>
+</button>
+
+<script src="herd-data.js"></script>
+<script src="people-data.js"></script>
+<script src="assets/herd-render.js"></script>
+<script src="assets/site.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+<script>
+  (function () {
+    function go() {
+      if (typeof Swiper === 'undefined') { return window.setTimeout(go, 100); }
+      var wrap = document.querySelector('.profile-swiper');
+      if (!wrap) return;
+      var slides = wrap.querySelectorAll('.swiper-slide');
+      if (!slides.length) return;
+      new Swiper('.profile-swiper', {
+        autoplay: slides.length > 1 ? { delay: 5000, disableOnInteraction: false } : false,
+        loop: slides.length > 1,
+        speed: 800,
+        pagination: { el: '.profile-dots', clickable: true },
+        navigation: { nextEl: '.profile-next', prevEl: '.profile-prev' },
+        keyboard: { enabled: true },
+      });
+    }
+    window.addEventListener('load', go);
+  })();
+</script>
+
+<script>
+  (function () {
+    window.addEventListener('load', function () {
+      window.setTimeout(function () {
+        if (!window.Alpine) {
+          document.documentElement.classList.add('alpine-failed');
+        }
+      }, 1000);
+    });
+  })();
+</script>
+
+</body>
+</html>

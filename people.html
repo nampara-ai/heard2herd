@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Circle | Heard2Herd</title>
+  <meta name="description" content="Meet the people, facilitators, artists, and practitioners in the Heard2Herd circle.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/seehorse.css">
+  <noscript><style>.page-loader{display:none}.reveal-init{opacity:1;transform:none}</style></noscript>
+</head>
+<body x-data="site()" :class="{ 'no-scroll': mobileNavOpen || searchOpen }">
+<div class="page-loader" :class="{ hidden: loaded }" aria-hidden="true"><div class="page-loader-text">H E A R D 2 H E R D</div></div>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<template x-if="mobileNavOpen"><div class="mobile-nav-backdrop" @click="closeMobileNav()"></div></template>
+<nav class="mobile-nav" :class="{ open: mobileNavOpen }" aria-label="Mobile navigation" x-cloak>
+  <div class="mobile-nav-header">
+    <span>H E A R D 2 H E R D</span>
+    <button class="mobile-nav-close" @click="closeMobileNav()" aria-label="Close navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="mobile-nav-items">
+    <div class="mobile-nav-item"><a href="seehorse.html" class="mobile-nav-item-header" style="text-decoration:none;"><span>Home</span></a></div>
+    <div id="mobile-nav-list"></div>
+  </div>
+</nav>
+
+<header class="header header--overlay" :class="{ 'header--scrolled': scrolled }" role="banner">
+  <div class="header-top">
+    <div class="header-left">
+      <button class="hamburger" :class="{ active: mobileNavOpen }" @click="toggleMobileNav()" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <button class="header-search" @click="openSearch()" aria-label="Open search">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
+        <span>SEARCH</span>
+      </button>
+    </div>
+    <a href="seehorse.html" class="header-logo">H &nbsp;E &nbsp;A &nbsp;R &nbsp;D &nbsp;2 &nbsp;H &nbsp;E &nbsp;R &nbsp;D</a>
+    <div style="display:flex;align-items:center;gap:16px;"><a href="https://www.lundahlperformance.com" class="header-actions" target="_blank" rel="noopener noreferrer">Noble Farm</a></div>
+  </div>
+  <nav class="header-nav" aria-label="Main navigation"><ul id="header-nav-list"></ul></nav>
+</header>
+
+<main id="main-content" class="people-page">
+  <div class="page-container">
+    <h2 class="section-title reveal-init" x-intersect:enter.once="$el.classList.add('revealed')"><a href="people.html">The Circle</a></h2>
+    <p class="herd-intro reveal-init" x-intersect:enter.once="$el.classList.add('revealed')">
+      Artists, facilitators, practitioners, and teachers drawn into orbit by the herd.
+    </p>
+    <div class="people-grid reveal-init" id="people-grid" x-intersect:enter.once="$el.classList.add('revealed')"></div>
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <nav aria-label="Footer navigation">
+    <div class="footer-main">
+      <a href="seehorse.html" class="footer-logo">H &nbsp;E &nbsp;A &nbsp;R &nbsp;D &nbsp;2 &nbsp;H &nbsp;E &nbsp;R &nbsp;D</a>
+      <div class="footer-column" :class="{ open: footerAccordion === 0 }">
+        <button class="footer-toggle mobile-nav-item-header" @click="footerAccordion = footerAccordion === 0 ? null : 0" style="padding-left:0;padding-right:0;"><span>The Herd</span></button>
+        <h4 class="footer-desktop-heading" style="display:block;"><a href="herd.html">The Herd</a></h4>
+        <ul id="footer-herd-list"></ul>
+      </div>
+      <div class="footer-column" :class="{ open: footerAccordion === 1 }">
+        <button class="footer-toggle mobile-nav-item-header" @click="footerAccordion = footerAccordion === 1 ? null : 1" style="padding-left:0;padding-right:0;"><span>The Circle</span></button>
+        <h4 class="footer-desktop-heading" style="display:block;"><a href="people.html">The Circle</a></h4>
+        <ul id="footer-people-list"></ul>
+      </div>
+      <div class="footer-column"><h4><a href="events.html">Events</a></h4><address class="footer-address">Noble Farm<br>10489 Pekin Rd<br>Newbury, OH 44065</address></div>
+    </div>
+  </nav>
+  <div class="footer-bottom"><div class="footer-bottom-left"><span>&copy; 2026 Heard2Herd. All Rights Reserved.</span></div></div>
+</footer>
+
+<script src="herd-data.js"></script>
+<script src="people-data.js"></script>
+<script src="assets/herd-render.js"></script>
+<script src="assets/site.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<script>(function(){window.addEventListener('load',function(){window.setTimeout(function(){if(!window.Alpine){document.documentElement.classList.add('alpine-failed');}},1000);});})();</script>
+</body>
+</html>

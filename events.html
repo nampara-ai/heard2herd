@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | Heard2Herd</title>
+  <meta name="description" content="Past and upcoming Heard2Herd retreats, gatherings, and event galleries.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/seehorse.css">
+  <noscript><style>.page-loader{display:none}.reveal-init{opacity:1;transform:none}</style></noscript>
+</head>
+<body x-data="site()" :class="{ 'no-scroll': mobileNavOpen || searchOpen }">
+<div class="page-loader" :class="{ hidden: loaded }" aria-hidden="true"><div class="page-loader-text">H E A R D 2 H E R D</div></div>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div class="search-overlay" x-show="searchOpen" x-cloak
+     x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+     x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+     @keydown.escape.window="searchOpen && closeSearch()" role="dialog" aria-label="Search">
+  <button class="search-overlay-close" @click="closeSearch()" aria-label="Close search">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+  </button>
+  <div class="search-input-wrapper">
+    <input type="text" class="search-input" placeholder="Search Events..." x-ref="searchInput" aria-label="Search">
+    <div class="search-tags">
+      <button class="search-tag">Retreats</button>
+      <button class="search-tag">Past Events</button>
+      <button class="search-tag">Upcoming</button>
+      <button class="search-tag">Florida</button>
+    </div>
+  </div>
+</div>
+
+<template x-if="mobileNavOpen"><div class="mobile-nav-backdrop" @click="closeMobileNav()"></div></template>
+<nav class="mobile-nav" :class="{ open: mobileNavOpen }" aria-label="Mobile navigation" x-cloak>
+  <div class="mobile-nav-header">
+    <span>H E A R D 2 H E R D</span>
+    <button class="mobile-nav-close" @click="closeMobileNav()" aria-label="Close navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="mobile-nav-items">
+    <div class="mobile-nav-item"><a href="seehorse.html" class="mobile-nav-item-header" style="text-decoration:none;"><span>Home</span></a></div>
+    <div id="mobile-nav-list"></div>
+  </div>
+</nav>
+
+<header class="header header--overlay" :class="{ 'header--scrolled': scrolled }" role="banner">
+  <div class="header-top">
+    <div class="header-left">
+      <button class="hamburger" :class="{ active: mobileNavOpen }" @click="toggleMobileNav()" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <button class="header-search" @click="openSearch()" aria-label="Open search">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
+        <span>SEARCH</span>
+      </button>
+    </div>
+    <a href="seehorse.html" class="header-logo">H &nbsp;E &nbsp;A &nbsp;R &nbsp;D &nbsp;2 &nbsp;H &nbsp;E &nbsp;R &nbsp;D</a>
+    <div style="display:flex;align-items:center;gap:16px;"><a href="https://www.lundahlperformance.com" class="header-actions" target="_blank" rel="noopener noreferrer">Noble Farm</a></div>
+  </div>
+  <nav class="header-nav" aria-label="Main navigation"><ul id="header-nav-list"></ul></nav>
+</header>
+
+<main id="main-content" class="events-page">
+  <section class="events-hero page-container reveal-init" x-intersect:enter.once="$el.classList.add('revealed')">
+    <h1>Past &amp; Upcoming Events</h1>
+    <div class="events-hero-copy">
+      <p class="profile-eyebrow">Retreats · Archives · Invitations</p>
+      <p>Each gathering becomes an archive: a field of images, notes, people, horses, and the particular weather of what happened there.</p>
+    </div>
+  </section>
+
+  <section class="events-grid page-container reveal-init" id="events-grid" x-intersect:enter.once="$el.classList.add('revealed')"></section>
+
+  <section class="events-reflections page-container" aria-label="Retreat testimonials">
+    <article class="event-reflection event-reflection--testimonial">
+      <div class="event-reflection-heading">
+        <p class="profile-eyebrow">Testimonial</p>
+        <h2>The Gentle Presence Of Nature</h2>
+      </div>
+      <div class="event-reflection-body">
+        <p>Creatures of almost metaphysical beauty, with flowing manes and soft feathering brushing their legs, they seem suspended between dream and reality.</p>
+        <p>Holding them, feeling their breath and the rhythm of their heart, is an experience beyond words; our beats merge, and in that moment I sense a profound, silent connection.</p>
+        <p>This is where the truest magic happens; in the gentle presence of nature that listens, embraces, and reflects you.</p>
+        <p>In that shared rhythm, what else can one feel but pure presence?</p>
+        <footer class="event-reflection-credit">
+          <strong>Michela Cattai</strong>
+          <span>Artist · Milan, Italy</span>
+          <span>Italian artist working between Milan and Venice, exploring the sculptural, chromatic, and expressive potential of glass.</span>
+          <span class="event-reflection-links">
+            <a href="https://www.michelacattaistudio.it/" target="_blank" rel="noopener noreferrer">Website</a>
+            <a href="https://www.instagram.com/michelacattai_studio/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </span>
+        </footer>
+      </div>
+    </article>
+
+    <article class="event-reflection event-reflection--testimonial">
+      <div class="event-reflection-heading">
+        <p class="profile-eyebrow">Testimonial</p>
+        <h2>When Human Meets Horse</h2>
+      </div>
+      <div class="event-reflection-body">
+        <p>Kimberly Pezzeminti has extraordinary vision. She understands what most of us have forgotten: that horses can take us to places deep inside ourselves that no medical textbook, no drug protocol, no pharmaceutical can reach. That place within where real, results-driven healing happens on every level: physical, emotional, and spiritual.</p>
+        <p>Kimberly has the courage to see reality differently. Her gift is helping others, including medical doctors like myself, do the same. She created a space where we could finally connect with the energies within us and around us--energies that are infinite, always available, yet so ignored in modern medicine.</p>
+        <p>Through her work with Gypsy Vanner horses, Kimberly both taught and inspired. She guided us toward evolving our consciousness itself. She helped us let go of old programs, outdated paradigms, and limited ways of thinking that keep us trapped in suffering.</p>
+        <p>This weekend was more than a conference, it was a transformation. Kimberly was the architect.</p>
+        <p>With deep gratitude and namaste,</p>
+        <footer class="event-reflection-credit">
+          <strong>Dr. Nisha Manek</strong>
+          <span>Nisha J. Manek, MD, FACP · Conscious Creation LLC</span>
+          <span>Author of <em>Bridging Science and Spirit: The Genius of William A. Tiller's Physics and the Promise of Information Medicine</em></span>
+          <span class="event-reflection-links">
+            <a href="https://nishamanekmd.com/" target="_blank" rel="noopener noreferrer">Website</a>
+            <a href="https://www.linkedin.com/in/nisha-manek-3942b529/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </span>
+        </footer>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <nav aria-label="Footer navigation">
+    <div class="footer-main">
+      <a href="seehorse.html" class="footer-logo">H &nbsp;E &nbsp;A &nbsp;R &nbsp;D &nbsp;2 &nbsp;H &nbsp;E &nbsp;R &nbsp;D</a>
+      <div class="footer-column" :class="{ open: footerAccordion === 0 }">
+        <button class="footer-toggle mobile-nav-item-header" @click="footerAccordion = footerAccordion === 0 ? null : 0" style="padding-left:0;padding-right:0;"><span>The Herd</span></button>
+        <h4 class="footer-desktop-heading" style="display:block;"><a href="herd.html">The Herd</a></h4>
+        <ul id="footer-herd-list"></ul>
+      </div>
+      <div class="footer-column" :class="{ open: footerAccordion === 1 }">
+        <button class="footer-toggle mobile-nav-item-header" @click="footerAccordion = footerAccordion === 1 ? null : 1" style="padding-left:0;padding-right:0;"><span>The Circle</span></button>
+        <h4 class="footer-desktop-heading" style="display:block;"><a href="people.html">The Circle</a></h4>
+        <ul id="footer-people-list"></ul>
+      </div>
+      <div class="footer-column"><h4><a href="events.html">Events</a></h4><address class="footer-address">Noble Farm<br>10489 Pekin Rd<br>Newbury, OH 44065</address></div>
+    </div>
+  </nav>
+  <div class="footer-bottom"><div class="footer-bottom-left"><span>&copy; 2026 Heard2Herd. All Rights Reserved.</span></div></div>
+</footer>
+
+<button class="back-to-top" :style="{ opacity: scrolled ? 1 : 0, pointerEvents: scrolled ? 'auto' : 'none' }" @click="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Back to top">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"/></svg>
+</button>
+
+<script src="herd-data.js"></script>
+<script src="people-data.js"></script>
+<script src="events-data.js"></script>
+<script src="assets/herd-render.js"></script>
+<script src="assets/site.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<script>(function(){window.addEventListener('load',function(){window.setTimeout(function(){if(!window.Alpine){document.documentElement.classList.add('alpine-failed');}},1000);});})();</script>
+</body>
+</html>
