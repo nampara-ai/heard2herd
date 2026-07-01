@@ -153,6 +153,36 @@ window.PEOPLE = [
     "gallery": []
   },
   {
+    "slug": "sophia-duncan",
+    "displayName": "Sophia Duncan",
+    "footerName": "Sophia Duncan",
+    "role": "Artist",
+    "eyebrow": "The Circle",
+    "bio": [
+      "Sophia Duncan is an artist in the Heard2Herd circle. Full biography coming soon."
+    ],
+    "order": 5,
+    "featured": true,
+    "website": "",
+    "instagram": "",
+    "links": [],
+    "sections": [
+      {
+        "title": "Practice",
+        "body": "A placeholder for Sophia's artistic practice, process, influences, and creative work."
+      },
+      {
+        "title": "Portfolio",
+        "body": "A placeholder portfolio for Sophia's artwork, studio documentation, and selected pieces."
+      }
+    ],
+    "portrait": "media/people/sophia-duncan/gallery/01.jpeg",
+    "gallery": [
+      "media/people/sophia-duncan/gallery/01.jpeg",
+      "media/people/sophia-duncan/gallery/02.jpeg"
+    ]
+  },
+  {
     "slug": "nisha-manek",
     "displayName": "Nisha Manek, MD, FACP",
     "footerName": "Nisha Manek",
@@ -164,7 +194,7 @@ window.PEOPLE = [
       "But she didn't stop there. Nisha partnered with one of the world's most innovative physicists, Emeritus Professor William A. Tiller of Stanford University, and pushed the boundaries of what is possible in medicine. She is the preeminent doctor of information medicine, which intersects consciousness, biofield science, and rheumatology to improve human health.",
       "She has authored a one-of-a-kind book, Bridging Science and Spirit, which closes the gap between two seemingly separate areas of knowledge. She is a fellow of the American College of Physicians and a fellow of the Royal College of Physicians of the United Kingdom."
     ],
-    "order": 5,
+    "order": 6,
     "featured": true,
     "website": "",
     "instagram": "",
@@ -194,7 +224,7 @@ window.PEOPLE = [
       "As an E-RYT 500 yoga instructor, yoga therapist, and former studio owner, Laura integrates breath, movement, mindfulness, and modern behavioral science to help people reconnect with vitality and presence. She has led retreats across the globe, from Iceland to the Galapagos, that offer space for reflection, restoration, and renewed purpose.",
       "Whether in a stressful office building or a mountain retreat, Laura invites participants to reconnect with their internal wisdom, restore balance, and reawaken purpose. What do people say about their experience? Time spent with Laura allows them to rest, reflect, and reawaken their capacity for balance, compassion, and joy--personally and professionally--so that they can meet the demands of their lives with more clarity."
     ],
-    "order": 6,
+    "order": 7,
     "featured": true,
     "website": "",
     "instagram": "",
