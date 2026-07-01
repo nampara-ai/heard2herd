@@ -495,12 +495,21 @@
       display: flex; justify-content: center; align-items: center; gap: 16px; margin-top: 30px;
     }
     .collections-arrow {
-      width: 44px; height: 44px; background: rgba(255,255,255,0.85); border: 1px solid var(--color-border);
+      width: 38px; height: 38px; background: rgba(255,255,255,0.85); border: 1px solid var(--color-border);
       display: flex; align-items: center; justify-content: center; cursor: pointer;
       transition: background var(--transition-fast);
     }
     .collections-arrow:hover { background: var(--color-bg-alt); }
-    .collections-arrow svg { width: 20px; height: 20px; color: var(--color-text); }
+    .collections-arrow svg { width: 17px; height: 17px; color: var(--color-text); }
+    .collections-nav .collections-pagination {
+      display: flex; align-items: center; justify-content: center; gap: 6px; width: auto;
+    }
+    .collections-nav .collections-pagination .swiper-pagination-bullet {
+      width: 7px; height: 7px; margin: 0; background: var(--color-text-light); opacity: 0.35;
+    }
+    .collections-nav .collections-pagination .swiper-pagination-bullet-active {
+      opacity: 1; background: var(--color-text);
+    }
 
     /* ============================================
        CURATED / SOCIAL

@@ -107,7 +107,7 @@ document.addEventListener('alpine:init', () => {
         spaceBetween: 30,
         loop: true,
         navigation: { nextEl: '.collections-next', prevEl: '.collections-prev' },
-        pagination: { el: '.collections-pagination', clickable: true },
+        pagination: { el: '.circle-pagination', clickable: true },
         breakpoints: {
           640: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
