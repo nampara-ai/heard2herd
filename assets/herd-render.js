@@ -167,13 +167,16 @@
     if (nameEl) nameEl.textContent = horse.barnName;
 
     var registeredEl = byId('registered-name');
-    if (registeredEl) registeredEl.textContent = horse.registeredName || 'Registered Name Pending';
+    if (registeredEl) {
+      registeredEl.textContent = horse.registeredName || '';
+      registeredEl.hidden = !horse.registeredName;
+    }
 
     var metaEl = byId('horse-meta');
     if (metaEl) {
-      var birthYear = horse.birthYear || '2018';
-      var sex = horse.sex || 'Gelding';
-      metaEl.textContent = birthYear + ' ' + sex;
+      var meta = [horse.birthYear, horse.sex].filter(Boolean).join(' ');
+      metaEl.textContent = meta;
+      metaEl.hidden = !meta;
     }
 
     var bioEl = byId('bio');

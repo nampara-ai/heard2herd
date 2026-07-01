@@ -5,12 +5,12 @@ window.HERD = [
   {
     "slug": "lee",
     "barnName": "Lee",
-    "registeredName": "GV Lee of Noble Farm",
-    "birthYear": "2018",
-    "sex": "Gelding",
+    "registeredName": "Parnell's Leannan",
+    "birthYear": "2005",
+    "sex": "Stallion",
     "bio": [
-      "PLACEHOLDER BIO — replace with Lee's real story. Lee is one of the founding members of the Noble Farm herd: a Gypsy Vanner whose steadiness anchors the group and sets the tempo for everyone around him.",
-      "Known for his heavy feathering and an unflappable temperament, Lee is often the first to greet visitors at the gate and the last to leave it. Swap this text, his registered name, his photos, and his pedigree whenever you're ready."
+      "Lee is the registered stallion Parnell's Leannan, a gray Gypsy Vanner bred by Parnell's Irish Cobs in Fort Collins, Colorado.",
+      "Foaled in 2005, he carries a direct Parnell line through Clononeen Dunbrody of Roscreigh and Parnell's Brenna. His profile is rooted in presence, substance, and the old-world type that gives the breed its unmistakable gravity."
     ],
     "order": 0,
     "featured": true,
@@ -28,11 +28,12 @@ window.HERD = [
   {
     "slug": "michael",
     "barnName": "Michael",
-    "registeredName": "",
-    "birthYear": "2018",
-    "sex": "Gelding",
+    "registeredName": "Parnell's Skellig Michael",
+    "birthYear": "2015",
+    "sex": "Stallion",
     "bio": [
-      "Profile coming soon — bio, registered name, photos, and pedigree will live here."
+      "Michael is Parnell's Skellig Michael, a piebald Gypsy Vanner named for the rocky island off the southwest coast of Ireland.",
+      "The supplied notes describe him as a refined, compact horse with a liquid eye, a short back, a close-coupled loin, and a full black tail inherited from his dam. His name carries the same sense of myth, history, and quiet strength that defines his presence in the herd."
     ],
     "order": 1,
     "featured": true,
@@ -42,18 +43,16 @@ window.HERD = [
       "media/herd/michael/gallery/Day02_IMG_0008.jpg",
       "media/herd/michael/gallery/Day02_IMG_0017.jpg"
     ],
-    "hasPedigree": false,
-    "pedigree": null
+    "hasPedigree": true,
+    "pedigree": "media/herd/michael/pedigree.pdf"
   },
   {
     "slug": "charm",
     "barnName": "Charm",
     "registeredName": "",
-    "birthYear": "2018",
-    "sex": "Gelding",
-    "bio": [
-      "Profile coming soon — bio, registered name, photos, and pedigree will live here."
-    ],
+    "birthYear": "",
+    "sex": "",
+    "bio": [],
     "order": 2,
     "featured": true,
     "portrait": "media/herd/charm/gallery/01.jpg",
@@ -66,11 +65,12 @@ window.HERD = [
   {
     "slug": "bumble",
     "barnName": "Bumble",
-    "registeredName": "",
+    "registeredName": "Bumble Bee Bon",
     "birthYear": "2018",
     "sex": "Gelding",
     "bio": [
-      "Profile coming soon — bio, registered name, photos, and pedigree will live here."
+      "Bumble is Bumble Bee Bon, a bay Gypsy Vanner gelding foaled in 2018 and bred by Rooted on the River Ranch in Meeteetse, Wyoming.",
+      "His registration traces his sire line to Parnell's Leannan. Bumble brings a young, steady presence to the herd, with the substance and kind eye that make the breed so approachable."
     ],
     "order": 3,
     "featured": false,
@@ -94,17 +94,18 @@ window.HERD = [
       "media/herd/bumble/gallery/IMG_0509_Day02.jpg",
       "media/herd/bumble/gallery/IMG_0517_Day02.jpg"
     ],
-    "hasPedigree": false,
-    "pedigree": null
+    "hasPedigree": true,
+    "pedigree": "media/herd/bumble/pedigree.pdf"
   },
   {
     "slug": "bonslee",
     "barnName": "Bonslee",
-    "registeredName": "",
-    "birthYear": "2018",
-    "sex": "Gelding",
+    "registeredName": "Bonslee Bok",
+    "birthYear": "2020",
+    "sex": "",
     "bio": [
-      "Profile coming soon — bio, registered name, photos, and pedigree will live here."
+      "Bonslee is Bonslee Bok, a piebald Gypsy Vanner foaled in 2020 and bred by Rooted on the River Ranch in Meeteetse, Wyoming.",
+      "Bonslee's pedigree brings together Parnell's Leannan and Parnell's Brenna, giving this horse a close connection to the Parnell breeding program and the classic Gypsy Vanner type represented throughout the herd."
     ],
     "order": 4,
     "featured": true,
@@ -114,18 +115,16 @@ window.HERD = [
       "media/herd/bonslee/gallery/Day01_IMG_0059.jpg",
       "media/herd/bonslee/gallery/Day01_IMG_0067.jpg"
     ],
-    "hasPedigree": false,
-    "pedigree": null
+    "hasPedigree": true,
+    "pedigree": "media/herd/bonslee/pedigree.pdf"
   },
   {
     "slug": "lucky",
     "barnName": "Lucky",
     "registeredName": "",
-    "birthYear": "2018",
-    "sex": "Gelding",
-    "bio": [
-      "Profile coming soon — bio, registered name, photos, and pedigree will live here."
-    ],
+    "birthYear": "",
+    "sex": "",
+    "bio": [],
     "order": 5,
     "featured": false,
     "portrait": "media/herd/lucky/gallery/IMG_0695_Day02.jpg",
@@ -158,11 +157,9 @@ window.HERD = [
     "slug": "bruno",
     "barnName": "Bruno",
     "registeredName": "",
-    "birthYear": "2018",
-    "sex": "Gelding",
-    "bio": [
-      "Profile coming soon — bio, registered name, photos, and pedigree will live here."
-    ],
+    "birthYear": "",
+    "sex": "",
+    "bio": [],
     "order": 6,
     "featured": false,
     "portrait": "media/herd/bruno/gallery/IMG_0517_Day02.jpg",
@@ -201,11 +198,9 @@ window.HERD = [
     "slug": "whiskers",
     "barnName": "Whiskers",
     "registeredName": "",
-    "birthYear": "2018",
-    "sex": "Gelding",
-    "bio": [
-      "Profile coming soon — bio, registered name, photos, and pedigree will live here."
-    ],
+    "birthYear": "",
+    "sex": "",
+    "bio": [],
     "order": 7,
     "featured": false,
     "portrait": null,
@@ -217,11 +212,9 @@ window.HERD = [
     "slug": "bentley",
     "barnName": "Bentley",
     "registeredName": "",
-    "birthYear": "2018",
-    "sex": "Gelding",
-    "bio": [
-      "Profile coming soon — bio, registered name, photos, and pedigree will live here."
-    ],
+    "birthYear": "",
+    "sex": "",
+    "bio": [],
     "order": 8,
     "featured": false,
     "portrait": null,
@@ -233,11 +226,9 @@ window.HERD = [
     "slug": "bonnie",
     "barnName": "Bonnie",
     "registeredName": "",
-    "birthYear": "2018",
-    "sex": "Gelding",
-    "bio": [
-      "Profile coming soon — bio, registered name, photos, and pedigree will live here."
-    ],
+    "birthYear": "",
+    "sex": "",
+    "bio": [],
     "order": 9,
     "featured": false,
     "portrait": "media/herd/bonnie/gallery/IMG_0376_Day02.jpg",
@@ -261,11 +252,9 @@ window.HERD = [
     "slug": "lizzie",
     "barnName": "Lizzie",
     "registeredName": "",
-    "birthYear": "2018",
-    "sex": "Gelding",
-    "bio": [
-      "Profile coming soon — bio, registered name, photos, and pedigree will live here."
-    ],
+    "birthYear": "",
+    "sex": "",
+    "bio": [],
     "order": 10,
     "featured": false,
     "portrait": "media/herd/lizzie/gallery/IMG_0210_Day01.jpg",
@@ -292,11 +281,12 @@ window.HERD = [
   {
     "slug": "saoirse",
     "barnName": "Saoirse",
-    "registeredName": "",
-    "birthYear": "2018",
-    "sex": "Gelding",
+    "registeredName": "Parnell's Saoirse",
+    "birthYear": "2015",
+    "sex": "Mare",
     "bio": [
-      "Profile coming soon — bio, registered name, photos, and pedigree will live here."
+      "Saoirse is Parnell's Saoirse, a 2015 Gypsy Vanner mare whose name means freedom or independence in Irish.",
+      "The supplied notes describe her as a strong, active foal with a refined head, large dark eyes, and movement that closely echoes her sire and dam. Her name and story tie her directly to Irish heritage and to the careful type sought in the Parnell program."
     ],
     "order": 11,
     "featured": false,
@@ -315,49 +305,52 @@ window.HERD = [
       "media/herd/saoirse/gallery/IMG_0459_Day01.jpg",
       "media/herd/saoirse/gallery/IMG_0463_Day01.jpg"
     ],
-    "hasPedigree": false,
-    "pedigree": null
+    "hasPedigree": true,
+    "pedigree": "media/herd/saoirse/pedigree.pdf"
   },
   {
     "slug": "punkn",
     "barnName": "Punkn",
-    "registeredName": "",
-    "birthYear": "2018",
-    "sex": "Gelding",
+    "registeredName": "Punk N' Spice",
+    "birthYear": "2016",
+    "sex": "Stallion",
     "bio": [
-      "Profile coming soon — bio, registered name, photos, and pedigree will live here."
+      "Punkn is Punk N' Spice, a bay tobiano Gypsy Vanner stallion foaled in 2016.",
+      "His registration lists Blue Feather's Kent as his sire and CC Jo Wiltshire's Spice as his dam. The result is a colorful, substantial horse with a pedigree that stands apart from the Parnell-heavy lines elsewhere in the herd."
     ],
     "order": 12,
     "featured": false,
     "portrait": null,
     "gallery": [],
-    "hasPedigree": false,
-    "pedigree": null
+    "hasPedigree": true,
+    "pedigree": "media/herd/punkn/pedigree.pdf"
   },
   {
     "slug": "tuesday",
     "barnName": "Tuesday",
-    "registeredName": "",
-    "birthYear": "2018",
-    "sex": "Gelding",
+    "registeredName": "Morning's Chance at Gold",
+    "birthYear": "2012",
+    "sex": "Mare",
     "bio": [
-      "Profile coming soon — bio, registered name, photos, and pedigree will live here."
+      "Tuesday is registered as Morning's Chance at Gold, a bay tobiano Gypsy Vanner mare foaled in 2012.",
+      "Her registration identifies Golden Chancelot as her sire. The supplied notes describe Tuesday as a striking bay mare with a black mane and tail, Tobiano markings, a star, high white stockings, excellent bone, and a proven broodmare role in the Rooted on the River Gypsy Vanner breeding program."
     ],
     "order": 13,
     "featured": false,
     "portrait": null,
     "gallery": [],
-    "hasPedigree": false,
-    "pedigree": null
+    "hasPedigree": true,
+    "pedigree": "media/herd/tuesday/pedigree.pdf"
   },
   {
     "slug": "smudge",
     "barnName": "Smudge",
-    "registeredName": "",
-    "birthYear": "2018",
-    "sex": "Gelding",
+    "registeredName": "Smudge of Gold",
+    "birthYear": "2010",
+    "sex": "Mare",
     "bio": [
-      "Profile coming soon — bio, registered name, photos, and pedigree will live here."
+      "Smudge is Smudge of Gold, a piebald Gypsy Vanner mare foaled in 2010 and bred in Orlando, Florida.",
+      "Her registration identifies Golden Chancelot as her sire. Smudge carries the dramatic black-and-white presence of the piebald type, with a pedigree connected to the same Florida lines represented elsewhere in the herd."
     ],
     "order": 14,
     "featured": false,
@@ -370,18 +363,16 @@ window.HERD = [
       "media/herd/smudge/gallery/IMG_0347_Day02.jpg",
       "media/herd/smudge/gallery/IMG_0353_Day02.jpg"
     ],
-    "hasPedigree": false,
-    "pedigree": null
+    "hasPedigree": true,
+    "pedigree": "media/herd/smudge/pedigree.pdf"
   },
   {
     "slug": "madge",
     "barnName": "Madge",
     "registeredName": "",
-    "birthYear": "2018",
-    "sex": "Gelding",
-    "bio": [
-      "Profile coming soon — bio, registered name, photos, and pedigree will live here."
-    ],
+    "birthYear": "",
+    "sex": "",
+    "bio": [],
     "order": 15,
     "featured": false,
     "portrait": "media/herd/madge/gallery/IMG_0464_Day01.jpg",
@@ -422,11 +413,12 @@ window.HERD = [
   {
     "slug": "luna",
     "barnName": "Luna",
-    "registeredName": "",
-    "birthYear": "2018",
-    "sex": "Gelding",
+    "registeredName": "Luna LeeDay",
+    "birthYear": "2020",
+    "sex": "Mare",
     "bio": [
-      "Profile coming soon — bio, registered name, photos, and pedigree will live here."
+      "Luna is Luna LeeDay, a bay Gypsy Vanner mare foaled in 2020 and bred by Rooted on the River Ranch in Meeteetse, Wyoming.",
+      "Her registration connects her sire line to Parnell's Brenna and her dam line to Morning's Chance at Gold, bringing together several of the core horses named in the supplied records."
     ],
     "order": 16,
     "featured": false,
@@ -450,7 +442,7 @@ window.HERD = [
       "media/herd/luna/gallery/IMG_0189_Day01.jpg",
       "media/herd/luna/gallery/IMG_0192_Day01.jpg"
     ],
-    "hasPedigree": false,
-    "pedigree": null
+    "hasPedigree": true,
+    "pedigree": "media/herd/luna/pedigree.pdf"
   }
 ];
