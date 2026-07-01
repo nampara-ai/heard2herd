@@ -32,6 +32,7 @@ document.addEventListener('alpine:init', () => {
       this.$nextTick(() => {
         this.initHeroSwiper();
         this.initCollectionsSwiper();
+        this.initHomeMobileSwipers();
         this.hideFooterDesktopToggles();
       });
     },
@@ -112,6 +113,39 @@ document.addEventListener('alpine:init', () => {
           1024: { slidesPerView: 3 },
         },
       });
+    },
+
+    initHomeMobileSwipers() {
+      if (!document.querySelector('.home-herd-swiper') && !document.querySelector('.home-events-swiper')) return;
+      if (typeof Swiper === 'undefined') {
+        setTimeout(() => this.initHomeMobileSwipers(), 100);
+        return;
+      }
+
+      const sharedOptions = {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        pagination: { clickable: true },
+      };
+
+      const herd = document.querySelector('.home-herd-swiper');
+      if (herd && !herd.swiper) {
+        new Swiper('.home-herd-swiper', {
+          ...sharedOptions,
+          navigation: { nextEl: '.home-herd-next', prevEl: '.home-herd-prev' },
+          pagination: { ...sharedOptions.pagination, el: '.home-herd-pagination' },
+        });
+      }
+
+      const events = document.querySelector('.home-events-swiper');
+      if (events && !events.swiper) {
+        new Swiper('.home-events-swiper', {
+          ...sharedOptions,
+          navigation: { nextEl: '.home-events-next', prevEl: '.home-events-prev' },
+          pagination: { ...sharedOptions.pagination, el: '.home-events-pagination' },
+        });
+      }
     },
 
     hideFooterDesktopToggles() {

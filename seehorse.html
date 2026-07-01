@@ -50,7 +50,7 @@
     </style>
   </noscript>
 </head>
-<body x-data="site()" :class="{ 'no-scroll': mobileNavOpen || searchOpen }">
+<body class="home-page" x-data="site()" :class="{ 'no-scroll': mobileNavOpen || searchOpen }">
 
 <!-- Page Loader -->
 <div class="page-loader" :class="{ hidden: loaded }" aria-hidden="true">
@@ -100,6 +100,7 @@
     </button>
   </div>
   <div class="mobile-nav-items">
+    <div id="mobile-nav-list"></div>
     <div class="mobile-nav-item">
       <button class="mobile-nav-item-header" @click="closeMobileNav(); openSearch()" style="cursor: pointer;">
         <span>Search</span>
@@ -109,11 +110,10 @@
       </button>
     </div>
     <div class="mobile-nav-item" style="border-bottom: 1px solid var(--color-border-light); margin-bottom: 8px; padding-bottom: 8px;">
-      <a href="seehorse.html" class="mobile-nav-item-header" style="text-decoration: none;">
+      <a href="mailto:" class="mobile-nav-item-header" style="text-decoration: none;">
         <span>Get In Touch</span>
       </a>
     </div>
-    <div id="mobile-nav-list"></div>
   </div>
 </nav>
 
@@ -263,6 +263,57 @@
       </div>
     </div>
   </div>
+  <div class="home-mobile-carousel home-herd-mobile reveal-init" x-intersect:enter.once="$el.classList.add('revealed')" aria-label="Featured herd carousel">
+    <div class="swiper home-herd-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="horse.html?h=lee" class="product-card">
+            <div class="product-card-image">
+              <img src="media/herd/lee/gallery/01.jpg" alt="Lee - Gypsy Vanner at Noble Farm" loading="lazy" decoding="async">
+            </div>
+            <div class="product-card-label">Lee</div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="horse.html?h=michael" class="product-card">
+            <div class="product-card-image">
+              <img src="media/herd/michael/gallery/01.jpg" alt="Michael - Gypsy Vanner at Noble Farm" loading="lazy" decoding="async">
+            </div>
+            <div class="product-card-label">Michael</div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="horse.html?h=charm" class="product-card">
+            <div class="product-card-image">
+              <img src="media/herd/charm/gallery/01.jpg" alt="Charm - Gypsy Vanner at Noble Farm" loading="lazy" decoding="async">
+            </div>
+            <div class="product-card-label">Charm</div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="horse.html?h=bonslee" class="product-card">
+            <div class="product-card-image">
+              <img src="media/herd/bonslee/gallery/01.jpg" alt="Bonslee - Gypsy Vanner at Noble Farm" loading="lazy" decoding="async">
+            </div>
+            <div class="product-card-label">Bonslee</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="home-mobile-carousel-nav">
+      <button class="collections-arrow home-herd-prev" aria-label="Previous horse">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
+        </svg>
+      </button>
+      <div class="collections-pagination home-herd-pagination"></div>
+      <button class="collections-arrow home-herd-next" aria-label="Next horse">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
+        </svg>
+      </button>
+    </div>
+  </div>
   <div style="text-align: center; margin-top: 40px;">
     <a href="herd.html" class="btn-ghost btn-ghost--dark">MEET THE FULL HERD &rarr;</a>
   </div>
@@ -299,6 +350,55 @@
     </div>
     <div class="vignette-card">
       <img src="media/golden hour.jpg" alt="Golden Hour - horses in the field at sunset" loading="lazy" decoding="async">
+    </div>
+  </div>
+  <div class="home-mobile-carousel home-events-mobile reveal-init" x-intersect:enter.once="$el.classList.add('revealed')" aria-label="Event photo carousel">
+    <div class="swiper home-events-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="vignette-card">
+            <img src="media/first light.jpg" alt="First Light - morning with horses at Noble Farm" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="vignette-card">
+            <img src="media/the circle gathers.jpg" alt="The Circle Gathers - practitioners arriving at Noble Farm" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="vignette-card">
+            <img src="media/stillness.jpg" alt="Stillness - a moment of presence and connection" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="vignette-card">
+            <img src="media/sound and silence.jpg" alt="Sound & Silence - sound healing at Noble Farm" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="vignette-card">
+            <img src="media/the conversation.jpg" alt="The Conversation - cross-discipline exchange at Noble Farm" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="vignette-card">
+            <img src="media/golden hour.jpg" alt="Golden Hour - horses in the field at sunset" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="home-mobile-carousel-nav">
+      <button class="collections-arrow home-events-prev" aria-label="Previous event photo">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
+        </svg>
+      </button>
+      <div class="collections-pagination home-events-pagination"></div>
+      <button class="collections-arrow home-events-next" aria-label="Next event photo">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
+        </svg>
+      </button>
     </div>
   </div>
   <div style="text-align: center; margin-top: 40px;">

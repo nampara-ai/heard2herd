@@ -58,7 +58,8 @@
   var mobileList = byId('mobile-nav-list');
   if (mobileList) {
     mobileList.innerHTML = MAIN_NAV.map(function (item) {
-      return '<a class="mobile-nav-link" href="' + esc(item.href) + '">' + esc(item.label) + '</a>';
+      return '<div class="mobile-nav-item"><a class="mobile-nav-item-header mobile-nav-link" href="' +
+        esc(item.href) + '"><span>' + esc(item.label) + '</span></a></div>';
     }).join('');
   }
 
