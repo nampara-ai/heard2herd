@@ -510,6 +510,7 @@
     .collections-nav .collections-pagination .swiper-pagination-bullet-active {
       opacity: 1; background: var(--color-text);
     }
+    .collections-cta { text-align: center; margin-top: 40px; }
 
     /* ============================================
        CURATED / SOCIAL
