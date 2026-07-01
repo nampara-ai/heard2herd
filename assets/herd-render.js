@@ -276,13 +276,29 @@
     if (sectionsEl) {
       var sections = Array.isArray(person.sections) ? person.sections : [];
       sectionsEl.innerHTML = sections.map(function (section) {
+        var sectionImages = Array.isArray(section.images) ? section.images : [];
+        var images = sectionImages.length
+          ? '<div class="person-section-gallery">' + sectionImages.map(function (src, i) {
+            return '<button class="person-section-art" type="button" data-lightbox-index="' + i +
+              '" aria-label="Open ' + esc(person.displayName) + ' portfolio image ' + (i + 1) + '">' +
+              '<img src="' + esc(src) + '" alt="' + esc(person.displayName) + ' portfolio image ' + (i + 1) +
+              '" loading="lazy" decoding="async"></button>';
+          }).join('') + '</div>'
+          : '';
         return '<article class="person-section">' +
           '<p class="profile-eyebrow">Portfolio</p>' +
           '<h2>' + esc(section.title || '') + '</h2>' +
           '<p>' + esc(section.body || '') + '</p>' +
+          images +
           '</article>';
       }).join('');
       if (!sectionsEl.innerHTML) sectionsEl.setAttribute('hidden', '');
+      sectionsEl.addEventListener('click', function (e) {
+        var art = e.target.closest ? e.target.closest('.person-section-art') : null;
+        if (!art) return;
+        var idx = parseInt(art.getAttribute('data-lightbox-index'), 10) || 0;
+        window.dispatchEvent(new CustomEvent('lightbox:open', { detail: { index: idx } }));
+      });
     }
 
     var gallery = Array.isArray(person.gallery) ? person.gallery : [];

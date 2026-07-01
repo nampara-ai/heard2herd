@@ -173,7 +173,11 @@ window.PEOPLE = [
       },
       {
         "title": "Portfolio",
-        "body": "A placeholder portfolio for Sophia's artwork, studio documentation, and selected pieces."
+        "body": "A placeholder portfolio for Sophia's artwork, studio documentation, and selected pieces.",
+        "images": [
+          "media/people/sophia-duncan/gallery/01.jpeg",
+          "media/people/sophia-duncan/gallery/02.jpeg"
+        ]
       }
     ],
     "portrait": "media/people/sophia-duncan/gallery/01.jpeg",
