@@ -10,8 +10,8 @@ window.EVENTS = [
     "location": "Florida",
     "summary": "The first SeeHorse gathering brought the circle into motion: horses, facilitators, sound, art, conversation, and a field of people learning how to listen together.",
     "body": [
-      "This event page is a placeholder story container for the Florida SeeHorse retreat. The image sequence currently comes from the homepage Events gallery: first light, the circle gathering, stillness, sound and silence, conversation, and golden hour.",
-      "Use this page for the event writeup, facilitator notes, participant reflections, location context, and a full gallery of the retreat as the archive grows."
+      "In Florida, the first SeeHorse gathering unfolded from first light through golden hour. The horses set the pace as sound, stillness, conversation, and creative practice opened a field of shared attention.",
+      "What emerged was less a program than a living exchange: practitioners and participants listening across disciplines, allowing the rhythm of the herd and the character of the land to guide the work."
     ],
     "details": [
       {
@@ -41,11 +41,12 @@ window.EVENTS = [
     "slug": "noble-farm-retreat",
     "title": "Noble Farm Retreat",
     "status": "Upcoming",
-    "dateLabel": "Newbury, Ohio · Date TBD",
+    "dateLabel": "Newbury, Ohio · By Inquiry",
     "location": "Noble Farm",
-    "summary": "A future Heard2Herd gathering at Noble Farm, shaped around the herd, the land, and the people called into the work.",
+    "summary": "A Heard2Herd gathering at Noble Farm, shaped around the herd, the land, and the people called into the work.",
     "body": [
-      "This is a placeholder for an upcoming retreat. Add schedule, registration details, facilitator lineup, and imagery when the event is ready to announce."
+      "At Noble Farm, the gathering will move at the pace of the horses and the land. Time for reflection, skilled practice, conversation, and quiet observation will create room for connection without forcing an outcome.",
+      "Further details will be shared as the circle takes shape. Inquiries are welcome from those who feel drawn to the work."
     ],
     "details": [
       {

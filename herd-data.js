@@ -9,8 +9,7 @@ window.HERD = [
     "birthYear": "2005",
     "sex": "Stallion",
     "bio": [
-      "Lee is the registered stallion Parnell's Leannan, a gray Gypsy Vanner bred by Parnell's Irish Cobs in Fort Collins, Colorado.",
-      "Foaled in 2005, he carries a direct Parnell line through Clononeen Dunbrody of Roscreigh and Parnell's Brenna. His profile is rooted in presence, substance, and the old-world type that gives the breed its unmistakable gravity."
+      "A distinguished Irish import, Lee boasts impeccable conformation, strong bone, and a glorious feather and coat. His refined presence and sure-footed versatility make him a natural in both riding and driving. At the ranch, Kim delights children with his almost mythical elegance, urging them to cherish the secret of this living unicorn."
     ],
     "order": 0,
     "featured": true,
@@ -30,8 +29,7 @@ window.HERD = [
     "birthYear": "2015",
     "sex": "Stallion",
     "bio": [
-      "Michael is Parnell's Skellig Michael, a piebald Gypsy Vanner named for the rocky island off the southwest coast of Ireland.",
-      "The supplied notes describe him as a refined, compact horse with a liquid eye, a short back, a close-coupled loin, and a full black tail inherited from his dam. His name carries the same sense of myth, history, and quiet strength that defines his presence in the herd."
+      "Playful, joyful, and impeccably balanced, Michael combines intelligence with an interactive spirit. His versatility shines in both riding and driving, tackling swift river crossings and steep terrain with fearless confidence. Every movement is a study in graceful power."
     ],
     "order": 1,
     "featured": true,
@@ -49,8 +47,10 @@ window.HERD = [
     "barnName": "Charm",
     "registeredName": "",
     "birthYear": "",
-    "sex": "",
-    "bio": [],
+    "sex": "Gelding",
+    "bio": [
+      "Patient and exceptionally kind, Charm exudes a gentle, stoic demeanor backed by a sensitive nature. He thrives as a nurturing herd nanny, guiding young horses toward independence with patient boundaries, often tending to them with a loving lick. His floaty gait adds an effortless elegance."
+    ],
     "order": 2,
     "featured": true,
     "portrait": "media/herd/charm/gallery/01.jpg",
@@ -67,8 +67,7 @@ window.HERD = [
     "birthYear": "2018",
     "sex": "Gelding",
     "bio": [
-      "Bumble is Bumble Bee Bon, a bay Gypsy Vanner gelding foaled in 2018 and bred by Rooted on the River Ranch in Meeteetse, Wyoming.",
-      "His registration traces his sire line to Parnell's Leannan. Bumble brings a young, steady presence to the herd, with the substance and kind eye that make the breed so approachable."
+      "Bumble, the first foal of the season, arrived amid a playful nighttime adventure that saw his sire Lee and dam Bonnie briefly escape the pasture. This solid bay displays a luminous, dappled coat and a relaxed, exploratory spirit. He delights in open-air rides, embodying laid-back confidence."
     ],
     "order": 3,
     "featured": false,
@@ -99,10 +98,9 @@ window.HERD = [
     "barnName": "Bonslee",
     "registeredName": "Bonslee Bok",
     "birthYear": "2020",
-    "sex": "",
+    "sex": "Gelding",
     "bio": [
-      "Bonslee is Bonslee Bok, a piebald Gypsy Vanner foaled in 2020 and bred by Rooted on the River Ranch in Meeteetse, Wyoming.",
-      "Bonslee's pedigree brings together Parnell's Leannan and Parnell's Brenna, giving this horse a close connection to the Parnell breeding program and the classic Gypsy Vanner type represented throughout the herd."
+      "Bonslee radiates a charismatic presence, greeting every visitor at the gate with unmistakable main-character energy. Loyal and personable, he follows closely during pen cleaning and embraces every new challenge with bold bravery. His spirited disposition ensures fun at every turn."
     ],
     "order": 4,
     "featured": true,
@@ -227,7 +225,7 @@ window.HERD = [
     "barnName": "Bonnie",
     "registeredName": "",
     "birthYear": "",
-    "sex": "",
+    "sex": "Mare",
     "bio": [],
     "order": 9,
     "featured": false,
@@ -253,8 +251,10 @@ window.HERD = [
     "barnName": "Lizzie",
     "registeredName": "",
     "birthYear": "",
-    "sex": "",
-    "bio": [],
+    "sex": "Mare",
+    "bio": [
+      "An Irish import of regal lineage, Lizzie presents flawless conformation and an air of aristocratic poise. Highly skilled under harness and eager under saddle, she connects deeply with her rider, delivering heartful performance with unwavering dedication."
+    ],
     "order": 10,
     "featured": false,
     "portrait": "media/herd/lizzie/gallery/1.jpg",
@@ -285,8 +285,7 @@ window.HERD = [
     "birthYear": "2015",
     "sex": "Mare",
     "bio": [
-      "Saoirse is Parnell's Saoirse, a 2015 Gypsy Vanner mare whose name means freedom or independence in Irish.",
-      "The supplied notes describe her as a strong, active foal with a refined head, large dark eyes, and movement that closely echoes her sire and dam. Her name and story tie her directly to Irish heritage and to the careful type sought in the Parnell program."
+      "Named for independence and liberty, Saoirse offers a sweet, captivating presence. Small in stature yet boasting a magnificent mane and generous heart, she balances elegance with a gentle temperament."
     ],
     "order": 11,
     "featured": false,
@@ -348,8 +347,7 @@ window.HERD = [
     "birthYear": "2012",
     "sex": "Mare",
     "bio": [
-      "Tuesday is registered as Morning's Chance at Gold, a bay tobiano Gypsy Vanner mare foaled in 2012.",
-      "Her registration identifies Golden Chancelot as her sire. The supplied notes describe Tuesday as a striking bay mare with a black mane and tail, Tobiano markings, a star, high white stockings, excellent bone, and a proven broodmare role in the Rooted on the River Gypsy Vanner breeding program."
+      "At a graceful 15.1 hands, Tuesday blends a kitten-like personality with refined beauty. Her rare bay hue and delicate feminine features complement a poised, elegant stride."
     ],
     "order": 13,
     "featured": false,
@@ -374,8 +372,7 @@ window.HERD = [
     "birthYear": "2010",
     "sex": "Mare",
     "bio": [
-      "Smudge is Smudge of Gold, a piebald Gypsy Vanner mare foaled in 2010 and bred in Orlando, Florida.",
-      "Her registration identifies Golden Chancelot as her sire. Smudge carries the dramatic black-and-white presence of the piebald type, with a pedigree connected to the same Florida lines represented elsewhere in the herd."
+      "Smudge, a true embodiment of beauty, was Kim's first horse and exemplifies meticulous care for her rider. She revels in grooming and pampering, delivering soulful performances that reflect depth and elegance."
     ],
     "order": 14,
     "featured": false,
@@ -392,8 +389,10 @@ window.HERD = [
     "barnName": "Madge",
     "registeredName": "",
     "birthYear": "",
-    "sex": "",
-    "bio": [],
+    "sex": "Mare",
+    "bio": [
+      "Madge exudes curiosity and fun, always the first to notice change and investigate. Her friendly disposition makes her a cherished companion."
+    ],
     "order": 15,
     "featured": false,
     "portrait": "media/herd/madge/gallery/1.jpg",
@@ -438,8 +437,7 @@ window.HERD = [
     "birthYear": "2020",
     "sex": "Mare",
     "bio": [
-      "Luna is Luna LeeDay, a bay Gypsy Vanner mare foaled in 2020 and bred by Rooted on the River Ranch in Meeteetse, Wyoming.",
-      "Her registration connects her sire line to Parnell's Brenna and her dam line to Morning's Chance at Gold, bringing together several of the core horses named in the supplied records."
+      "Luna's registered name evokes a showgirl's charisma; her striking gray dapples and lofty presence command attention. Intelligent, sensitive, and intuitively eager to please, she consistently delivers smooth, graceful gaits."
     ],
     "order": 16,
     "featured": false,

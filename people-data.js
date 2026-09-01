@@ -26,7 +26,7 @@ window.PEOPLE = [
       },
       {
         "title": "Portfolio",
-        "body": "A home for retreat documentation, writing, Heard2Herd imagery, ranch and sanctuary work, and Kimberly's evolving creative field."
+        "body": "Kimberly's creative field encompasses retreat design, writing, Heard2Herd imagery, and the evolving work of ranch and sanctuary stewardship."
       }
     ],
     "portrait": null,
@@ -55,7 +55,7 @@ window.PEOPLE = [
       },
       {
         "title": "Portfolio",
-        "body": "A place for Noble Farm work, horsemanship teaching, clinic documentation, ranch experience, and moments of horse-human communication."
+        "body": "Amy's work at Noble Farm brings together horsemanship teaching, clinics, ranch experience, and close observation of the moments when communication between horse and human becomes clear."
       }
     ],
     "portrait": null,
@@ -86,7 +86,7 @@ window.PEOPLE = [
       },
       {
         "title": "Portfolio",
-        "body": "A place for sound-healing sessions, Biofield Tuning offerings, instruments, retreat documentation, audio, and wellness work."
+        "body": "Lesley's portfolio spans sound-healing sessions, Biofield Tuning, restorative group experiences, and the instruments and frequencies that give each offering its distinct resonance."
       }
     ],
     "portrait": null,
@@ -117,7 +117,7 @@ window.PEOPLE = [
       },
       {
         "title": "Portfolio",
-        "body": "A place for Tea Huntress work, tea sourcing, formulation, ritual design, travel, agriculture, and wellness documentation."
+        "body": "Sarah's work traces tea from landscape to ritual through sourcing, formulation, travel, sustainable agriculture, and experiences designed to restore calm and connection."
       }
     ],
     "portrait": null,
@@ -146,7 +146,7 @@ window.PEOPLE = [
       },
       {
         "title": "Portfolio",
-        "body": "A place for performance documentation, music, storytelling, dance, flute work, video, and retreat offerings."
+        "body": "Tony's performances weave music, storytelling, dance, Native American flute, and cultural memory into experiences of celebration, teaching, and connection."
       }
     ],
     "portrait": null,
@@ -159,7 +159,7 @@ window.PEOPLE = [
     "role": "Artist",
     "eyebrow": "The Circle",
     "bio": [
-      "Sophia Duncan is an artist in the Heard2Herd circle. Full biography coming soon."
+      "Sophia Duncan is an artist whose work brings a distinct visual voice to the Heard2Herd circle. Her selected pieces invite close looking, allowing color, form, and atmosphere to carry the conversation."
     ],
     "order": 5,
     "featured": true,
@@ -169,11 +169,11 @@ window.PEOPLE = [
     "sections": [
       {
         "title": "Practice",
-        "body": "A placeholder for Sophia's artistic practice, process, influences, and creative work."
+        "body": "Sophia's practice is represented here through a developing body of visual work, presented with space for each piece to hold its own presence and rhythm."
       },
       {
         "title": "Portfolio",
-        "body": "A placeholder portfolio for Sophia's artwork, studio documentation, and selected pieces.",
+        "body": "Two selected works offer an introduction to Sophia's artistic perspective and the visual language she brings to the Circle.",
         "images": [
           "media/people/sophia-duncan/gallery/01.jpeg",
           "media/people/sophia-duncan/gallery/02.jpeg"
@@ -210,7 +210,7 @@ window.PEOPLE = [
       },
       {
         "title": "Portfolio",
-        "body": "A place for writing, talks, teaching, Bridging Science and Spirit, medical leadership, and retreat documentation."
+        "body": "Nisha's work extends across writing, teaching, medical leadership, public talks, and her book Bridging Science and Spirit, each exploring a more expansive view of human health."
       }
     ],
     "portrait": null,
@@ -240,7 +240,7 @@ window.PEOPLE = [
       },
       {
         "title": "Portfolio",
-        "body": "A place for retreats, coaching work, leadership development, yoga therapy, wellness programs, and facilitation documentation."
+        "body": "Laura's work brings leadership development, coaching, yoga therapy, retreats, and wellness programs into a cohesive practice of resilience, clarity, and purposeful growth."
       }
     ],
     "portrait": null,
