@@ -186,6 +186,7 @@
       bioEl.innerHTML = paras.map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('');
     }
 
+    /* Pedigree download temporarily disabled until final attachments are ready.
     var ped = byId('pedigree-btn');
     if (ped) {
       if (horse.hasPedigree && horse.pedigree) {
@@ -195,6 +196,7 @@
         ped.setAttribute('hidden', '');
       }
     }
+    */
 
     // Gallery
     var gallery = Array.isArray(horse.gallery) ? horse.gallery : [];
