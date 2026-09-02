@@ -30,6 +30,7 @@ window.PEOPLE = [
       }
     ],
     "portrait": "media/people/kimberly-pezzeminti/gallery/01.jpg",
+    "directoryPortrait": "media/people/kimberly-pezzeminti/directory.jpg",
     "gallery": [
       "media/people/kimberly-pezzeminti/gallery/01.jpg"
     ]
@@ -61,6 +62,7 @@ window.PEOPLE = [
       }
     ],
     "portrait": "media/people/amy-lundahl/gallery/01.jpg",
+    "directoryPortrait": "",
     "gallery": [
       "media/people/amy-lundahl/gallery/01.jpg"
     ]
@@ -94,6 +96,7 @@ window.PEOPLE = [
       }
     ],
     "portrait": "media/people/lesley-turski/gallery/01.jpg",
+    "directoryPortrait": "",
     "gallery": [
       "media/people/lesley-turski/gallery/01.jpg"
     ]
@@ -127,6 +130,7 @@ window.PEOPLE = [
       }
     ],
     "portrait": "media/people/sarah-scarborough/gallery/01.jpg",
+    "directoryPortrait": "",
     "gallery": [
       "media/people/sarah-scarborough/gallery/01.jpg"
     ]
@@ -158,6 +162,7 @@ window.PEOPLE = [
       }
     ],
     "portrait": "media/people/tony-duncan/gallery/01.jpg",
+    "directoryPortrait": "",
     "gallery": [
       "media/people/tony-duncan/gallery/01.jpg"
     ]
@@ -191,6 +196,7 @@ window.PEOPLE = [
       }
     ],
     "portrait": "media/people/sophia-duncan/gallery/01.jpeg",
+    "directoryPortrait": "",
     "gallery": [
       "media/people/sophia-duncan/gallery/01.jpeg",
       "media/people/sophia-duncan/gallery/02.jpeg"
@@ -224,6 +230,7 @@ window.PEOPLE = [
       }
     ],
     "portrait": "media/people/nisha-manek/gallery/01.png",
+    "directoryPortrait": "",
     "gallery": [
       "media/people/nisha-manek/gallery/01.png"
     ]
@@ -256,6 +263,7 @@ window.PEOPLE = [
       }
     ],
     "portrait": "media/people/laura-vanderberg/gallery/01.jpg",
+    "directoryPortrait": "",
     "gallery": [
       "media/people/laura-vanderberg/gallery/01.jpg"
     ]

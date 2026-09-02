@@ -92,12 +92,13 @@
   }
 
   function personCardHTML(p) {
-    var media = p.portrait
-      ? '<div class="product-card-image"><img src="' + esc(p.portrait) + '" alt="' +
+    var directoryPortrait = p.directoryPortrait || p.portrait;
+    var media = directoryPortrait
+      ? '<div class="product-card-image"><img src="' + esc(directoryPortrait) + '" alt="' +
         esc(p.displayName) + ' - ' + esc(p.role) + '" loading="lazy" decoding="async"></div>'
       : '<div class="product-card-image"><img src="media/avatar placeholder.jpg" alt="' +
         esc(p.displayName) + ' - ' + esc(p.role) + '" loading="lazy" decoding="async"></div>';
-    return '<a href="' + personHref(p.slug) + '" class="product-card person-directory-card">' +
+    return '<a href="' + personHref(p.slug) + '" class="product-card person-directory-card" data-person-slug="' + esc(p.slug) + '">' +
       media +
       '<div class="product-card-label">' + esc(p.displayName) + '</div>' +
       '<div class="collection-card-discipline">' + esc(p.role) + '</div>' +

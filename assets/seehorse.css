@@ -811,6 +811,9 @@
     .people-page .section-title { text-align: center; margin-bottom: 14px; }
     .people-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px; }
     .person-directory-card .collection-card-discipline { margin-bottom: 12px; }
+    .person-directory-card[data-person-slug="kimberly-pezzeminti"] .product-card-image img {
+      object-position: center center;
+    }
 
     /* ---- Profile page ---- */
     .profile-page { padding: 160px 0 110px; }
