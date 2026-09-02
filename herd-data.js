@@ -122,8 +122,10 @@ window.HERD = [
     "barnName": "Lucky",
     "registeredName": "",
     "birthYear": "",
-    "sex": "",
-    "bio": [],
+    "sex": "Gelding",
+    "bio": [
+      "Lucky, a striking gelding with unique coloring, exudes an innate people-oriented charm. He delights in building connections, eagerly responding to human cues and thriving in interactive settings. His confident bearing and easygoing nature make him a favorite among visitors."
+    ],
     "order": 5,
     "featured": false,
     "portrait": "media/herd/lucky/gallery/1.jpg",
@@ -157,8 +159,10 @@ window.HERD = [
     "barnName": "Bruno",
     "registeredName": "",
     "birthYear": "",
-    "sex": "",
-    "bio": [],
+    "sex": "Gelding",
+    "bio": [
+      "Bruno, a thoughtful gelding, possesses a deep intuitive awareness that sets him apart. His reflective nature translates into a calm, steady presence and measured precision in movement. With a strong yet gentle disposition, Bruno exudes reliability and a nuanced understanding of his surroundings."
+    ],
     "order": 6,
     "featured": false,
     "portrait": "media/herd/bruno/gallery/2.jpg",
@@ -194,11 +198,13 @@ window.HERD = [
   },
   {
     "slug": "whiskers",
-    "barnName": "Whiskers",
+    "barnName": "Whiskas",
     "registeredName": "",
     "birthYear": "",
-    "sex": "",
-    "bio": [],
+    "sex": "Colt (Yearling)",
+    "bio": [
+      "Whiskas radiates a friendly temperament that endears him to all who meet him. His soft, approachable demeanor pairs with an athletic build. As he matures, Whiskas is poised to develop into a versatile and amiable partner, ready for both training and leisurely rides."
+    ],
     "order": 7,
     "featured": false,
     "portrait": null,
@@ -211,8 +217,10 @@ window.HERD = [
     "barnName": "Bentley",
     "registeredName": "",
     "birthYear": "",
-    "sex": "",
-    "bio": [],
+    "sex": "Colt (Foal)",
+    "bio": [
+      "Bentley, a fresh-born colt, instantly captured attention with his inquisitive eyes and playful disposition. Though still tender, his silky coat and graceful gait hint at a promising future. Curious and eager to explore, Bentley thrives on human interaction, already displaying a keen intelligence."
+    ],
     "order": 8,
     "featured": false,
     "portrait": null,
@@ -226,7 +234,9 @@ window.HERD = [
     "registeredName": "",
     "birthYear": "",
     "sex": "Mare",
-    "bio": [],
+    "bio": [
+      "An Irish-bred beauty, Bonnie carries a distinguished lineage marked by boldness and courage. Her striking conformation and regal presence make her a standout in the paddock, while her nurturing nature shines as an exemplary dam."
+    ],
     "order": 9,
     "featured": false,
     "portrait": "media/herd/bonnie/gallery/IMG_0376_Day02.jpg",
@@ -312,10 +322,9 @@ window.HERD = [
     "barnName": "Punkn",
     "registeredName": "Punk N' Spice",
     "birthYear": "2016",
-    "sex": "Stallion",
+    "sex": "Mare",
     "bio": [
-      "Punkn is Punk N' Spice, a bay tobiano Gypsy Vanner stallion foaled in 2016.",
-      "His registration lists Blue Feather's Kent as his sire and CC Jo Wiltshire's Spice as his dam. The result is a colorful, substantial horse with a pedigree that stands apart from the Parnell-heavy lines elsewhere in the herd."
+      "Punkn, a spirited mare, blends sweetness with an unmistakable spunk. Her kind heart and good-minded nature make her a cherished companion, while her robust maternal instincts have already shone through as an attentive mother. With her beautiful painted coat and graceful movement, she offers both elegance and an adventurous spirit."
     ],
     "order": 12,
     "featured": false,
