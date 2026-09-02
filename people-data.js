@@ -29,8 +29,10 @@ window.PEOPLE = [
         "body": "Kimberly's creative field encompasses retreat design, writing, Heard2Herd imagery, and the evolving work of ranch and sanctuary stewardship."
       }
     ],
-    "portrait": null,
-    "gallery": []
+    "portrait": "media/people/kimberly-pezzeminti/gallery/01.jpg",
+    "gallery": [
+      "media/people/kimberly-pezzeminti/gallery/01.jpg"
+    ]
   },
   {
     "slug": "amy-lundahl",
