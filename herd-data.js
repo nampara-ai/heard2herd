@@ -207,8 +207,10 @@ window.HERD = [
     ],
     "order": 7,
     "featured": false,
-    "portrait": null,
-    "gallery": [],
+    "portrait": "media/herd/whiskers/gallery/01.jpg",
+    "gallery": [
+      "media/herd/whiskers/gallery/01.jpg"
+    ],
     "hasPedigree": false,
     "pedigree": null
   },
@@ -223,8 +225,10 @@ window.HERD = [
     ],
     "order": 8,
     "featured": false,
-    "portrait": null,
-    "gallery": [],
+    "portrait": "media/herd/bentley/gallery/01.jpg",
+    "gallery": [
+      "media/herd/bentley/gallery/01.jpg"
+    ],
     "hasPedigree": false,
     "pedigree": null
   },

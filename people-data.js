@@ -60,8 +60,10 @@ window.PEOPLE = [
         "body": "Amy's work at Noble Farm brings together horsemanship teaching, clinics, ranch experience, and close observation of the moments when communication between horse and human becomes clear."
       }
     ],
-    "portrait": null,
-    "gallery": []
+    "portrait": "media/people/amy-lundahl/gallery/01.jpg",
+    "gallery": [
+      "media/people/amy-lundahl/gallery/01.jpg"
+    ]
   },
   {
     "slug": "lesley-turski",
@@ -91,8 +93,10 @@ window.PEOPLE = [
         "body": "Lesley's portfolio spans sound-healing sessions, Biofield Tuning, restorative group experiences, and the instruments and frequencies that give each offering its distinct resonance."
       }
     ],
-    "portrait": null,
-    "gallery": []
+    "portrait": "media/people/lesley-turski/gallery/01.jpg",
+    "gallery": [
+      "media/people/lesley-turski/gallery/01.jpg"
+    ]
   },
   {
     "slug": "sarah-scarborough",
@@ -122,8 +126,10 @@ window.PEOPLE = [
         "body": "Sarah's work traces tea from landscape to ritual through sourcing, formulation, travel, sustainable agriculture, and experiences designed to restore calm and connection."
       }
     ],
-    "portrait": null,
-    "gallery": []
+    "portrait": "media/people/sarah-scarborough/gallery/01.jpg",
+    "gallery": [
+      "media/people/sarah-scarborough/gallery/01.jpg"
+    ]
   },
   {
     "slug": "tony-duncan",
@@ -151,8 +157,10 @@ window.PEOPLE = [
         "body": "Tony's performances weave music, storytelling, dance, Native American flute, and cultural memory into experiences of celebration, teaching, and connection."
       }
     ],
-    "portrait": null,
-    "gallery": []
+    "portrait": "media/people/tony-duncan/gallery/01.jpg",
+    "gallery": [
+      "media/people/tony-duncan/gallery/01.jpg"
+    ]
   },
   {
     "slug": "sophia-duncan",
@@ -215,8 +223,10 @@ window.PEOPLE = [
         "body": "Nisha's work extends across writing, teaching, medical leadership, public talks, and her book Bridging Science and Spirit, each exploring a more expansive view of human health."
       }
     ],
-    "portrait": null,
-    "gallery": []
+    "portrait": "media/people/nisha-manek/gallery/01.png",
+    "gallery": [
+      "media/people/nisha-manek/gallery/01.png"
+    ]
   },
   {
     "slug": "laura-vanderberg",
@@ -245,7 +255,9 @@ window.PEOPLE = [
         "body": "Laura's work brings leadership development, coaching, yoga therapy, retreats, and wellness programs into a cohesive practice of resilience, clarity, and purposeful growth."
       }
     ],
-    "portrait": null,
-    "gallery": []
+    "portrait": "media/people/laura-vanderberg/gallery/01.jpg",
+    "gallery": [
+      "media/people/laura-vanderberg/gallery/01.jpg"
+    ]
   }
 ];
