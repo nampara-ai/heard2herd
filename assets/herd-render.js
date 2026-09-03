@@ -387,7 +387,9 @@
       details.innerHTML = rows.map(function (row) {
         return '<div class="event-detail-row"><span>' + esc(row.label || '') + '</span><strong>' + esc(row.value || '') + '</strong></div>';
       }).join('');
-      if (!details.innerHTML) details.setAttribute('hidden', '');
+      // Temporarily hide the SeeHorse Florida Format/State block.
+      // The underlying event.details data remains intact for future use.
+      if (event.slug === 'seehorse-florida' || !details.innerHTML) details.setAttribute('hidden', '');
     }
 
     var cta = byId('event-cta');

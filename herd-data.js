@@ -17,7 +17,8 @@ window.HERD = [
     "gallery": [
       "media/herd/lee/gallery/01.jpg",
       "media/herd/lee/gallery/Day01_IMG_0098.jpg",
-      "media/herd/lee/gallery/Day01_IMG_0101.jpg"
+      "media/herd/lee/gallery/Day01_IMG_0101.jpg",
+      "media/herd/lee/gallery/lee-driving.jpg"
     ],
     "hasPedigree": true,
     "pedigree": "media/herd/lee/pedigree.pdf"
@@ -37,7 +38,10 @@ window.HERD = [
     "gallery": [
       "media/herd/michael/gallery/01.jpg",
       "media/herd/michael/gallery/Day02_IMG_0008.jpg",
-      "media/herd/michael/gallery/Day02_IMG_0017.jpg"
+      "media/herd/michael/gallery/Day02_IMG_0017.jpg",
+      "media/herd/michael/gallery/michael-1-1.jpeg",
+      "media/herd/michael/gallery/michael-2-2.jpeg",
+      "media/herd/michael/gallery/michael-3-3.jpeg"
     ],
     "hasPedigree": true,
     "pedigree": "media/herd/michael/pedigree.pdf"
@@ -45,8 +49,8 @@ window.HERD = [
   {
     "slug": "charm",
     "barnName": "Charm",
-    "registeredName": "",
-    "birthYear": "",
+    "registeredName": "Chance's Charm n' Luck",
+    "birthYear": "2008",
     "sex": "Gelding",
     "bio": [
       "Patient and exceptionally kind, Charm exudes a gentle, stoic demeanor backed by a sensitive nature. He thrives as a nurturing herd nanny, guiding young horses toward independence with patient boundaries, often tending to them with a loving lick. His floaty gait adds an effortless elegance."
@@ -120,8 +124,8 @@ window.HERD = [
   {
     "slug": "lucky",
     "barnName": "Lucky",
-    "registeredName": "",
-    "birthYear": "",
+    "registeredName": "Feel N' Lucky",
+    "birthYear": "2024",
     "sex": "Gelding",
     "bio": [
       "Lucky, a striking gelding with unique coloring, exudes an innate people-oriented charm. He delights in building connections, eagerly responding to human cues and thriving in interactive settings. His confident bearing and easygoing nature make him a favorite among visitors."
@@ -132,15 +136,6 @@ window.HERD = [
     "gallery": [
       "media/herd/lucky/gallery/1.jpg",
       "media/herd/lucky/gallery/2.jpg",
-      "media/herd/lucky/gallery/IMG_0695_Day02.jpg",
-      "media/herd/lucky/gallery/IMG_0698_Day02.jpg",
-      "media/herd/lucky/gallery/IMG_0705_Day02.jpg",
-      "media/herd/lucky/gallery/IMG_0711_Day02.jpg",
-      "media/herd/lucky/gallery/IMG_0724_Day02.jpg",
-      "media/herd/lucky/gallery/IMG_0726_Day02.jpg",
-      "media/herd/lucky/gallery/IMG_0727_Day02.jpg",
-      "media/herd/lucky/gallery/IMG_0732_Day02.jpg",
-      "media/herd/lucky/gallery/IMG_0746_Day02.jpg",
       "media/herd/lucky/gallery/IMG_0775_Day02.jpg",
       "media/herd/lucky/gallery/IMG_0781_Day02.jpg",
       "media/herd/lucky/gallery/IMG_0824_Day02.jpg",
@@ -157,11 +152,11 @@ window.HERD = [
   {
     "slug": "bruno",
     "barnName": "Bruno",
-    "registeredName": "",
-    "birthYear": "",
-    "sex": "Gelding",
+    "registeredName": "Bruno'z Brazilian Gold",
+    "birthYear": "2024",
+    "sex": "Colt",
     "bio": [
-      "Bruno, a thoughtful gelding, possesses a deep intuitive awareness that sets him apart. His reflective nature translates into a calm, steady presence and measured precision in movement. With a strong yet gentle disposition, Bruno exudes reliability and a nuanced understanding of his surroundings."
+      "Bruno, a thoughtful colt, possesses a deep intuitive awareness that sets him apart. His reflective nature translates into a calm, steady presence and measured precision in movement. With a strong yet gentle disposition, Bruno exudes reliability and a nuanced understanding of his surroundings."
     ],
     "order": 6,
     "featured": false,
@@ -171,27 +166,7 @@ window.HERD = [
       "media/herd/bruno/gallery/3.jpg",
       "media/herd/bruno/gallery/4.jpg",
       "media/herd/bruno/gallery/5.jpg",
-      "media/herd/bruno/gallery/6.jpg",
-      "media/herd/bruno/gallery/IMG_0517_Day02.jpg",
-      "media/herd/bruno/gallery/IMG_0518_Day02.jpg",
-      "media/herd/bruno/gallery/IMG_0523_Day02.jpg",
-      "media/herd/bruno/gallery/IMG_0526_Day02.jpg",
-      "media/herd/bruno/gallery/IMG_0528_Day02.jpg",
-      "media/herd/bruno/gallery/IMG_0530_Day02.jpg",
-      "media/herd/bruno/gallery/IMG_0533_Day02.jpg",
-      "media/herd/bruno/gallery/IMG_0558_Day02.jpg",
-      "media/herd/bruno/gallery/IMG_0567_Day02.jpg",
-      "media/herd/bruno/gallery/IMG_0569_Day02.jpg",
-      "media/herd/bruno/gallery/IMG_0584_Day02.jpg",
-      "media/herd/bruno/gallery/IMG_0615_Day02.jpg",
-      "media/herd/bruno/gallery/IMG_0633_Day02.jpg",
-      "media/herd/bruno/gallery/IMG_0640_Day02.jpg",
-      "media/herd/bruno/gallery/IMG_0644_Day02.jpg",
-      "media/herd/bruno/gallery/IMG_0654_Day02.jpg",
-      "media/herd/bruno/gallery/IMG_0667_Day02.jpg",
-      "media/herd/bruno/gallery/IMG_0668_Day02.jpg",
-      "media/herd/bruno/gallery/IMG_0683_Day02.jpg",
-      "media/herd/bruno/gallery/IMG_0684_Day02.jpg"
+      "media/herd/bruno/gallery/6.jpg"
     ],
     "hasPedigree": false,
     "pedigree": null
@@ -200,16 +175,24 @@ window.HERD = [
     "slug": "whiskers",
     "barnName": "Whiskas",
     "registeredName": "",
-    "birthYear": "",
+    "birthYear": "2025",
     "sex": "Colt (Yearling)",
     "bio": [
       "Whiskas radiates a friendly temperament that endears him to all who meet him. His soft, approachable demeanor pairs with an athletic build. As he matures, Whiskas is poised to develop into a versatile and amiable partner, ready for both training and leisurely rides."
     ],
     "order": 7,
     "featured": false,
-    "portrait": "media/herd/whiskers/gallery/01.jpg",
+    "portrait": "media/herd/whiskers/gallery/whiskas-title.jpeg",
     "gallery": [
-      "media/herd/whiskers/gallery/01.jpg"
+      "media/herd/whiskers/gallery/whiskas-title.jpeg",
+      "media/herd/whiskers/gallery/zz-whiskas-0-1.jpeg",
+      "media/herd/whiskers/gallery/zz-whiskas-5-5.jpeg",
+      "media/herd/whiskers/gallery/zz-whiskas-foal-1.jpeg",
+      "media/herd/whiskers/gallery/zz-whiskas-haler.jpeg",
+      "media/herd/whiskers/gallery/zz-whiskas-run-2.jpeg",
+      "media/herd/whiskers/gallery/zz-whiskas-run-3.jpeg",
+      "media/herd/whiskers/gallery/zz-whiskas-run.jpeg",
+      "media/herd/whiskers/gallery/zz-whiskas-stall.jpeg"
     ],
     "hasPedigree": false,
     "pedigree": null
@@ -218,16 +201,17 @@ window.HERD = [
     "slug": "bentley",
     "barnName": "Bentley",
     "registeredName": "",
-    "birthYear": "",
+    "birthYear": "2026",
     "sex": "Colt (Foal)",
     "bio": [
       "Bentley, a fresh-born colt, instantly captured attention with his inquisitive eyes and playful disposition. Though still tender, his silky coat and graceful gait hint at a promising future. Curious and eager to explore, Bentley thrives on human interaction, already displaying a keen intelligence."
     ],
     "order": 8,
     "featured": false,
-    "portrait": "media/herd/bentley/gallery/01.jpg",
+    "portrait": "media/herd/bentley/gallery/bentley-title.jpeg",
     "gallery": [
-      "media/herd/bentley/gallery/01.jpg"
+      "media/herd/bentley/gallery/bentley-title.jpeg",
+      "media/herd/bentley/gallery/zz-bentley-2-2.jpeg"
     ],
     "hasPedigree": false,
     "pedigree": null
@@ -235,8 +219,8 @@ window.HERD = [
   {
     "slug": "bonnie",
     "barnName": "Bonnie",
-    "registeredName": "",
-    "birthYear": "",
+    "registeredName": "WCGRS Billy Boys Bonny Rebeccah",
+    "birthYear": "2014",
     "sex": "Mare",
     "bio": [
       "An Irish-bred beauty, Bonnie carries a distinguished lineage marked by boldness and courage. Her striking conformation and regal presence make her a standout in the paddock, while her nurturing nature shines as an exemplary dam."
@@ -263,8 +247,8 @@ window.HERD = [
   {
     "slug": "lizzie",
     "barnName": "Lizzie",
-    "registeredName": "",
-    "birthYear": "",
+    "registeredName": "Parnell's Lisdoonvarna",
+    "birthYear": "2005",
     "sex": "Mare",
     "bio": [
       "An Irish import of regal lineage, Lizzie presents flawless conformation and an air of aristocratic poise. Highly skilled under harness and eager under saddle, she connects deeply with her rider, delivering heartful performance with unwavering dedication."
@@ -345,10 +329,7 @@ window.HERD = [
       "media/herd/punkn/gallery/IMG_0729_Day02.jpg",
       "media/herd/punkn/gallery/IMG_0732_Day02.jpg",
       "media/herd/punkn/gallery/IMG_0746_Day02.jpg",
-      "media/herd/punkn/gallery/IMG_0775_Day02.jpg",
-      "media/herd/punkn/gallery/IMG_0795_Day02.jpg",
-      "media/herd/punkn/gallery/IMG_0824_Day02.jpg",
-      "media/herd/punkn/gallery/IMG_0838_Day02.jpg"
+      "media/herd/punkn/gallery/IMG_0824_Day02.jpg"
     ],
     "hasPedigree": true,
     "pedigree": "media/herd/punkn/pedigree.pdf"
@@ -356,7 +337,7 @@ window.HERD = [
   {
     "slug": "tuesday",
     "barnName": "Tuesday",
-    "registeredName": "Morning's Chance at Gold",
+    "registeredName": "Tuesday Morning's Chance at Gold",
     "birthYear": "2012",
     "sex": "Mare",
     "bio": [
@@ -400,8 +381,8 @@ window.HERD = [
   {
     "slug": "madge",
     "barnName": "Madge",
-    "registeredName": "",
-    "birthYear": "",
+    "registeredName": "Madge-ick LaMacchia",
+    "birthYear": "2023",
     "sex": "Mare",
     "bio": [
       "Madge exudes curiosity and fun, always the first to notice change and investigate. Her friendly disposition makes her a cherished companion."
