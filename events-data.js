@@ -62,7 +62,9 @@ window.EVENTS = [
     "ctaLabel": "Inquire",
     "ctaUrl": "mailto:",
     "order": 1,
-    "portrait": null,
-    "gallery": []
+    "portrait": "media/events/noble-farm-retreat/gallery/noble-farm-field.jpg",
+    "gallery": [
+      "media/events/noble-farm-retreat/gallery/noble-farm-field.jpg"
+    ]
   }
 ];
