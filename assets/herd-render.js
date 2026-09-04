@@ -56,7 +56,7 @@
       overlay.className = 'search-overlay';
       overlay.setAttribute('x-show', 'searchOpen');
       overlay.setAttribute('x-cloak', '');
-      overlay.setAttribute('@keydown.escape.window', 'searchOpen && closeSearch()');
+      overlay.setAttribute('x-on:keydown.escape.window', 'searchOpen && closeSearch()');
       overlay.setAttribute('role', 'dialog');
       overlay.setAttribute('aria-modal', 'true');
       overlay.setAttribute('aria-label', 'Site search');
