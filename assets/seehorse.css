@@ -248,7 +248,8 @@
        ============================================ */
     .search-overlay {
       position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: var(--z-overlay);
-      display: flex; align-items: center; justify-content: center; flex-direction: column;
+      display: flex; align-items: center; justify-content: flex-start; flex-direction: column;
+      padding: min(18vh, 150px) 0 50px; overflow-y: auto;
     }
     .search-overlay-close {
       position: absolute; top: 30px; right: 40px; background: none; border: none;
@@ -264,11 +265,33 @@
     .search-input::placeholder { color: rgba(255,255,255,0.4); }
     .search-tags { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
     .search-tag {
+      display: inline-block;
       background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
       color: rgba(255,255,255,0.8); padding: 8px 20px; font-family: var(--font-sans);
       font-size: var(--type-meta); letter-spacing: var(--tracking-nav); cursor: pointer; transition: all var(--transition-fast);
     }
     .search-tag:hover { background: rgba(255,255,255,0.2); }
+    .search-results { margin-top: 34px; border-top: 1px solid rgba(255,255,255,0.25); }
+    .search-results-prompt, .search-results-empty, .search-results-count {
+      margin: 18px 0 0; color: rgba(255,255,255,0.65); font-family: var(--font-sans);
+      font-size: var(--type-meta); font-weight: 300; letter-spacing: var(--tracking-nav);
+    }
+    .search-results-count { text-transform: uppercase; }
+    .search-result {
+      display: grid; grid-template-columns: 76px minmax(0, 1fr) auto; align-items: center;
+      gap: 18px; min-height: 72px; border-bottom: 1px solid rgba(255,255,255,0.18); color: white;
+    }
+    .search-result-type {
+      font-family: var(--font-sans); font-size: var(--type-utility); letter-spacing: var(--tracking-meta);
+      text-transform: uppercase; color: rgba(255,255,255,0.55);
+    }
+    .search-result-copy { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+    .search-result-copy strong { font-family: var(--font-serif); font-size: var(--type-title-small); font-weight: 400; line-height: var(--line-heading); }
+    .search-result-copy small {
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: rgba(255,255,255,0.62);
+      font-family: var(--font-sans); font-size: var(--type-meta); font-weight: 300;
+    }
+    .search-result-arrow { font-size: var(--type-body-lead); color: rgba(255,255,255,0.7); }
 
     /* ============================================
        MOBILE DRAWER
@@ -759,6 +782,14 @@
     }
 
     @media (max-width: 768px) {
+      .search-overlay { padding: 96px 0 32px; }
+      .search-overlay-close { top: 24px; right: 24px; }
+      .search-input-wrapper { width: calc(100% - 40px); }
+      .search-tags { gap: 8px; margin-top: 18px; }
+      .search-tag { padding: 7px 12px; }
+      .search-results { margin-top: 24px; }
+      .search-result { grid-template-columns: 58px minmax(0, 1fr) auto; gap: 10px; min-height: 66px; }
+      .search-result-copy strong { font-size: 20px; }
       .home-page .product-range .section-title {
         max-width: var(--max-width);
         margin: 0 auto 40px;

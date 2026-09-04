@@ -26,8 +26,143 @@
     { label: 'Horses', href: 'herd.html' },
     { label: 'Events', href: 'events.html' },
     { label: 'Artists', href: 'people.html' },
-    { label: 'Contact', href: 'mailto:' }
+    { label: 'Get In Touch', href: 'mailto:' }
   ];
+
+  function searchOverlayHTML() {
+    return '<button class="search-overlay-close" @click="closeSearch()" aria-label="Close search">' +
+      '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">' +
+      '<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button>' +
+      '<div class="search-input-wrapper">' +
+      '<form class="site-search-form" role="search">' +
+      '<label class="sr-only" for="site-search-input">Search Heard2Herd</label>' +
+      '<input id="site-search-input" type="search" class="search-input" placeholder="Search horses, artists, events..." ' +
+      'x-ref="searchInput" aria-label="Search Heard2Herd" autocomplete="off">' +
+      '</form>' +
+      '<div class="search-tags" aria-label="Explore Heard2Herd">' +
+      '<a class="search-tag" href="herd.html">The Herd</a>' +
+      '<a class="search-tag" href="people.html">The Circle</a>' +
+      '<a class="search-tag" href="events.html">Events</a>' +
+      '<a class="search-tag" href="about.html">About</a>' +
+      '</div>' +
+      '<div class="search-results" aria-live="polite"></div>' +
+      '</div>';
+  }
+
+  function ensureSearchOverlay() {
+    var overlay = document.querySelector('.search-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'search-overlay';
+      overlay.setAttribute('x-show', 'searchOpen');
+      overlay.setAttribute('x-cloak', '');
+      overlay.setAttribute('@keydown.escape.window', 'searchOpen && closeSearch()');
+      overlay.setAttribute('role', 'dialog');
+      overlay.setAttribute('aria-modal', 'true');
+      overlay.setAttribute('aria-label', 'Site search');
+      document.body.insertBefore(overlay, document.body.firstChild);
+    }
+    overlay.innerHTML = searchOverlayHTML();
+    return overlay;
+  }
+
+  function searchableText(parts) {
+    return parts.filter(Boolean).join(' ').toLowerCase();
+  }
+
+  function buildSearchIndex() {
+    var items = [
+      { title: 'Home', type: 'Page', subtitle: 'Heard2Herd', href: 'seehorse.html', text: 'home heard2herd horses artists events noble farm' },
+      { title: 'About', type: 'Page', subtitle: 'The Heard2Herd story', href: 'about.html', text: 'about story purpose people place horses circle' },
+      { title: 'The Horses', type: 'Page', subtitle: 'Meet the full herd', href: 'herd.html', text: 'horses herd gypsy vanners profiles' },
+      { title: 'The Circle', type: 'Page', subtitle: 'Artists and practitioners', href: 'people.html', text: 'circle artists people practitioners profiles' },
+      { title: 'Events', type: 'Page', subtitle: 'Past and upcoming gatherings', href: 'events.html', text: 'events retreats gatherings archive' },
+      { title: 'Get In Touch', type: 'Contact', subtitle: 'Contact Heard2Herd', href: 'mailto:', text: 'contact get in touch email heard2herd' }
+    ];
+
+    HERD.forEach(function (horse) {
+      items.push({
+        title: horse.barnName,
+        type: 'Horse',
+        subtitle: [horse.registeredName, horse.birthYear, horse.sex].filter(Boolean).join(' · '),
+        href: profileHref(horse.slug),
+        text: searchableText([horse.barnName, horse.registeredName, horse.birthYear, horse.sex].concat(horse.bio || []))
+      });
+    });
+    PEOPLE.forEach(function (person) {
+      var sectionText = (person.sections || []).map(function (section) {
+        return [section.title, section.body].filter(Boolean).join(' ');
+      });
+      items.push({
+        title: person.displayName,
+        type: 'Artist',
+        subtitle: person.role || 'The Circle',
+        href: personHref(person.slug),
+        text: searchableText([person.displayName, person.role].concat(person.bio || [], sectionText))
+      });
+    });
+    EVENTS.forEach(function (event) {
+      var detailText = (event.details || []).map(function (detail) {
+        return [detail.label, detail.value].filter(Boolean).join(' ');
+      });
+      items.push({
+        title: event.title,
+        type: 'Event',
+        subtitle: [event.status, event.dateLabel].filter(Boolean).join(' · '),
+        href: eventHref(event.slug),
+        text: searchableText([event.title, event.status, event.dateLabel, event.location, event.summary].concat(event.body || [], detailText))
+      });
+    });
+    return items;
+  }
+
+  function initSiteSearch(overlay) {
+    var input = overlay.querySelector('.search-input');
+    var results = overlay.querySelector('.search-results');
+    var form = overlay.querySelector('.site-search-form');
+    var index = buildSearchIndex();
+    var currentResults = [];
+
+    function render(query) {
+      var normalized = query.trim().toLowerCase();
+      if (!normalized) {
+        currentResults = [];
+        results.innerHTML = '<p class="search-results-prompt">Search by name, discipline, place, or keyword.</p>';
+        return;
+      }
+      var terms = normalized.split(/\s+/).filter(Boolean);
+      currentResults = index.filter(function (item) {
+        return terms.every(function (term) { return item.text.indexOf(term) !== -1; });
+      }).sort(function (a, b) {
+        var aTitle = a.title.toLowerCase();
+        var bTitle = b.title.toLowerCase();
+        var aScore = aTitle === normalized ? 0 : (aTitle.indexOf(normalized) === 0 ? 1 : (aTitle.indexOf(normalized) !== -1 ? 2 : 3));
+        var bScore = bTitle === normalized ? 0 : (bTitle.indexOf(normalized) === 0 ? 1 : (bTitle.indexOf(normalized) !== -1 ? 2 : 3));
+        return aScore - bScore || a.title.localeCompare(b.title);
+      }).slice(0, 12);
+
+      if (!currentResults.length) {
+        results.innerHTML = '<p class="search-results-empty">No results for “' + esc(query.trim()) + '.”</p>';
+        return;
+      }
+      results.innerHTML = '<p class="search-results-count">' + currentResults.length +
+        (currentResults.length === 1 ? ' result' : ' results') + '</p>' +
+        currentResults.map(function (item) {
+          return '<a class="search-result" href="' + esc(item.href) + '">' +
+            '<span class="search-result-type">' + esc(item.type) + '</span>' +
+            '<span class="search-result-copy"><strong>' + esc(item.title) + '</strong>' +
+            (item.subtitle ? '<small>' + esc(item.subtitle) + '</small>' : '') + '</span>' +
+            '<span class="search-result-arrow" aria-hidden="true">&rarr;</span></a>';
+        }).join('');
+    }
+
+    input.addEventListener('input', function () { render(input.value); });
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (currentResults.length) window.location.href = currentResults[0].href;
+    });
+    render('');
+  }
 
   function getParam(name) {
     var m = new RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
@@ -46,6 +181,9 @@
     return null;
   }
 
+  var searchOverlay = ensureSearchOverlay();
+  initSiteSearch(searchOverlay);
+
   // ---- Header desktop nav (present on every page) ----
   var navList = byId('header-nav-list');
   if (navList) {
@@ -60,7 +198,13 @@
     mobileList.innerHTML = MAIN_NAV.map(function (item) {
       return '<div class="mobile-nav-item"><a class="mobile-nav-item-header mobile-nav-link" href="' +
         esc(item.href) + '"><span>' + esc(item.label) + '</span></a></div>';
-    }).join('');
+    }).join('') +
+      '<div class="mobile-nav-item mobile-nav-search-item">' +
+      '<button class="mobile-nav-item-header" type="button" @click="closeMobileNav(); openSearch()">' +
+      '<span>Search</span>' +
+      '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">' +
+      '<path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>' +
+      '</button></div>';
   }
 
   // ---- Footer "The Herd" column ----
